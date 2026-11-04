@@ -66,14 +66,21 @@ const CASES = [
     client: "Movistar Peru", side: "Agency · VML", year: "2024–2025",
     metric: "+45%", metricLabel: "CTR · CPC −30%",
     thumb: "movistar-chip-plan",
-    insight: "Price is not a yes or no. It is a variable with many forms.",
+    insight: "Nobody judges a price on its own. They judge it against what they already pay.",
     body: [
       "Led Movistar Peru's Creative Excellence program across home internet, mobile plans and devices, comparing static and carousel ads by CTR, clicks, engagement rate and impressions.",
-      "Price-led ads only worked for mobile plans, so price became a creative variable: final price, percentage or fixed-amount discount, installments, savings versus the current bill, or no price at all. Hypotheses were built per product and tested by audience.",
-      "Testing confirmed that percentage discounts performed better on lower-priced plans and fixed-amount discounts on higher-priced devices, measured on both ad and sales metrics. The design team was briefed with insights rather than raw figures, each piece with one clear objective.",
+      "Putting the price up front only worked for mobile plans. The difference was the reference point: someone switching operators compares the full price with their current bill, while an existing customer only weighs what they would add to it.",
+      "So the price changed shape with the ask. The full price, kept low, when the ask was to switch. Only the difference when the ask was to add a line. A bundle price with a time frame for Movistar Total. And no price at all when the message was value.",
+      "Testing also confirmed that percentage discounts performed better on lower-priced plans and fixed-amount discounts on higher-priced devices, measured on both ad and sales metrics. Designers were briefed with insights rather than raw figures, each piece with one clear objective.",
       "Paid social CTR rose by 45% and CPC fell by 30%.",
     ],
-    images: ["movistar-chip-plan", "movistar-total-149", "movistar-fiber-plus-mobile", "movistar-duo-plus-20", "movistar-total-benefits"],
+    images: [
+      ["movistar-chip-plan", "Switch: the full price, kept low"],
+      ["movistar-duo-plus-20", "Add a line: only the difference"],
+      ["movistar-fiber-plus-mobile", "Complete the bundle: the combined price"],
+      ["movistar-total-149", "Bundle: a price with a time frame"],
+      ["movistar-total-benefits", "Value: no price at all"],
+    ],
   },
   {
     slug: "aws-vanishing-emails",
@@ -91,16 +98,17 @@ const CASES = [
   },
   {
     slug: "samsung-influencers",
-    title: "Scripts for influencers",
+    title: "Influencer content for Samsung",
     client: "Samsung Peru", side: "Agency · VML", year: "2022–2023",
     metric: "50+", metricLabel: "influencer scripts",
     tile: "Samsung Galaxy",
-    insight: "A script works when it sounds like the creator, not the brand.",
+    insight: "A script works when the creator's followers hear the creator, not the brand.",
     body: [
-      "Wrote more than 50 scripts for Samsung campaigns with leading Peruvian influencers, adapting each one to the creator's voice and format.",
-      "The work covered the Galaxy S23 launch teasers, Galaxy Buds2 Pro and the Galaxy Trade-In promotion.",
+      "Wrote more than 50 scripts for Samsung campaigns with leading Peruvian influencers, and coordinated directly with each creator from idea to final cut.",
+      "Every script was tailored to the creator's voice and to what their followers respond to, while keeping Samsung's message and product claims intact. The goal was content the creator was proud to post, the brand approved and the audience actually watched.",
+      "Campaigns included the Galaxy S23 launch teasers, Galaxy Buds2 Pro and the Galaxy Trade-In promotion.",
     ],
-    link: { href: BEHANCE, label: "Watch the four influencer videos on Behance ↗" },
+    link: { href: BEHANCE, label: "See selected videos on Behance ↗" },
   },
 ];
 
@@ -158,8 +166,13 @@ function caseView(slug) {
   if (i < 0) return workView();
   const c = CASES[i];
   const next = CASES[(i + 1) % CASES.length];
-  const imgs = [...(c.images || []).map(A), ...(c.imageUrls || [])];
-  const gallery = imgs.length ? `<div class="gallery">${imgs.map((src) => `<figure><img src="${src}" alt="${esc(c.title)}" loading="lazy"></figure>`).join("")}</div>` : "";
+  const imgs = [
+    ...(c.images || []).map((im) => (Array.isArray(im) ? { src: A(im[0]), caption: im[1] } : { src: A(im) })),
+    ...(c.imageUrls || []).map((src) => ({ src })),
+  ];
+  const figure = ({ src, caption }) => `<figure><img src="${src}" alt="${esc(caption || c.title)}" loading="lazy">${caption ? `<figcaption>${esc(caption)}</figcaption>` : ""}</figure>`;
+  const ordered = imgs.some((im) => im.caption);
+  const gallery = imgs.length ? `<div class="gallery${ordered ? " gallery-grid" : ""}">${imgs.map(figure).join("")}</div>` : "";
   const video = c.video ? `<div class="embed"><iframe src="${c.video}" title="${esc(c.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>` : "";
   const link = c.link ? `<a class="cta" href="${c.link.href}" target="_blank" rel="noopener">${esc(c.link.label)}</a>` : "";
 
