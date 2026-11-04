@@ -73,7 +73,7 @@ const CASES = [
       "Testing confirmed that percentage discounts performed better on lower-priced plans and fixed-amount discounts on higher-priced devices, measured on both ad and sales metrics. The design team was briefed with insights rather than raw figures, each piece with one clear objective.",
       "Paid social CTR rose by 45% and CPC fell by 30%.",
     ],
-    images: ["movistar-chip-plan"],
+    images: ["movistar-chip-plan", "movistar-total-149", "movistar-fiber-plus-mobile", "movistar-duo-plus-20", "movistar-total-benefits"],
   },
   {
     slug: "aws-vanishing-emails",
