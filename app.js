@@ -121,9 +121,9 @@ function workView() {
 
   return `
     <section class="view">
-      <div class="hero">
+      <div class="hero band">
         <p class="eyebrow">Creative Strategist · Performance creative, copy &amp; AI production</p>
-        <h1>Ideas that are measured, <em>then</em> made better.</h1>
+        <h1 class="display">Ideas that are measured, <em>then</em> made better.</h1>
         <div class="hero-grid">
           <p>Experience on both sides of advertising. At VML, the full creative process for Movistar, izipay and Samsung. At UCAL, the brand side: optimizing creative against business objectives and presenting results to the CEO and board.</p>
           <div class="stats">
@@ -132,8 +132,12 @@ function workView() {
             <div class="stat"><b>−28%</b><span>Cost per lead, UCAL</span></div>
           </div>
         </div>
+        <div class="actions">
+          <a class="btn btn-lime" href="#cases" data-scroll="cases">See the work ↓</a>
+          <a class="btn btn-ghost" href="#/contact">Get in touch</a>
+        </div>
       </div>
-      <div class="section-head"><h2>Selected work</h2><span>${CASES.length} cases</span></div>
+      <div class="section-head" id="cases"><h2 class="display">Selected work</h2><span>${CASES.length} cases</span></div>
       <ul class="case-list">${rows}</ul>
     </section>`;
 }
@@ -152,7 +156,7 @@ function caseView(slug) {
     <article class="view">
       <a class="back" href="#/work">← All work</a>
       <header class="case-hero">
-        <h1>${esc(c.title)}</h1>
+        <h1 class="display">${esc(c.title)}</h1>
         <dl class="case-facts">
           <div><dt>Client</dt><dd>${esc(c.client)}</dd></div>
           <div><dt>Side</dt><dd>${esc(c.side)}</dd></div>
@@ -161,7 +165,7 @@ function caseView(slug) {
         </dl>
       </header>
       <div class="case-body">
-        <div><h3>The idea</h3><p class="insight">${esc(c.insight)}</p></div>
+        <div class="insight-card"><h3>The idea</h3><p class="insight">${esc(c.insight)}</p></div>
         <div><h3>What was done</h3>${c.body.map((p) => `<p>${esc(p)}</p>`).join("")}</div>
       </div>
       ${video}${link}${gallery}
@@ -172,9 +176,9 @@ function caseView(slug) {
 function aboutView() {
   return `
     <section class="view">
-      <div class="hero">
+      <div class="hero band">
         <p class="eyebrow">About</p>
-        <h1>Agency craft. <em>Client</em> accountability.</h1>
+        <h1 class="display">Agency craft. <em>Client</em> accountability.</h1>
       </div>
       <div class="about-grid">
         <h2>Profile</h2>
@@ -220,9 +224,9 @@ function aboutView() {
 
 function contactView() {
   return `
-    <section class="view contact">
+    <section class="view contact band">
       <p class="eyebrow">Contact</p>
-      <h1>Let's make ads that <em>earn</em> their budget.</h1>
+      <h1 class="display">Let's make ads that <em>earn</em> their budget.</h1>
       <div class="contact-links">
         <a href="mailto:scbrake98@gmail.com">scbrake98@gmail.com<span>Email</span></a>
         <a href="https://www.linkedin.com/in/sebastiancarrillo-brake-a62b37145" target="_blank" rel="noopener">LinkedIn<span>Profile ↗</span></a>
@@ -237,6 +241,14 @@ function render() {
   document.querySelectorAll(".tabs a").forEach((a) => a.classList.toggle("active", a.dataset.tab === (["about", "contact"].includes(tab) ? tab : "work")));
   window.scrollTo(0, 0);
 }
+
+// Smooth-scroll buttons that point at an in-page section, not a route
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("[data-scroll]");
+  if (!a) return;
+  e.preventDefault();
+  document.getElementById(a.dataset.scroll)?.scrollIntoView({ behavior: "smooth" });
+});
 
 // Lightbox for gallery images
 const lb = document.getElementById("lightbox");
