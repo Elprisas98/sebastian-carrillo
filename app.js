@@ -80,7 +80,7 @@ const CASES = [
     title: "Vanishing Emails",
     client: "AWS & Slalom", side: "Agency · VML", year: "2024",
     metric: "Bronze", metricLabel: "Cannes Lions, Innovation",
-    thumbUrl: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/7d3ece185153969.655ebeda78f67.png",
+    thumbUrl: "https://img.youtube.com/vi/y38ZLtFSQ64/hqdefault.jpg",
     insight: "When promotions expire, their carbon footprint fades away.",
     body: [
       "Stored emails, especially promotional ones, consume energy in data centers long after they stop being useful. Most people never think about it.",
@@ -88,20 +88,18 @@ const CASES = [
       "Awarded a Cannes Lions Bronze in Innovation, 2024.",
     ],
     video: "https://www.youtube-nocookie.com/embed/y38ZLtFSQ64",
-    imageUrls: ["https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/7d3ece185153969.655ebeda78f67.png"],
   },
   {
     slug: "samsung-influencers",
     title: "Scripts for influencers",
     client: "Samsung Peru", side: "Agency · VML", year: "2022–2023",
     metric: "Galaxy", metricLabel: "S23, Buds2 Pro, Trade-In",
-    thumbUrl: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/9378ba185153969.655fce49dacf3.png",
+    thumbUrl: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/7d3ece185153969.655ebeda78f67.png",
     insight: "Write for the creator's voice, not the brand's.",
     body: [
       "Storytelling and scripts for Samsung campaigns with leading Peruvian influencers, covering the Galaxy S23 launch teasers, Galaxy Buds2 Pro and the Galaxy Trade-In promotion.",
     ],
     link: { href: BEHANCE, label: "Watch the four influencer videos on Behance ↗" },
-    imageUrls: ["https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/9378ba185153969.655fce49dacf3.png"],
   },
 ];
 
