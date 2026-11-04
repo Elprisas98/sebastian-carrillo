@@ -93,8 +93,8 @@ const CASES = [
     slug: "samsung-influencers",
     title: "Scripts for influencers",
     client: "Samsung Peru", side: "Agency · VML", year: "2022–2023",
-    metric: "Galaxy", metricLabel: "S23, Buds2 Pro, Trade-In",
-    thumbUrl: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/7d3ece185153969.655ebeda78f67.png",
+    metric: "4", metricLabel: "influencer videos",
+    tile: "Samsung Galaxy",
     insight: "Write for the creator's voice, not the brand's.",
     body: [
       "Storytelling and scripts for Samsung campaigns with leading Peruvian influencers, covering the Galaxy S23 launch teasers, Galaxy Buds2 Pro and the Galaxy Trade-In promotion.",
@@ -106,6 +106,7 @@ const CASES = [
 const app = document.getElementById("app");
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const thumbSrc = (c) => c.thumbUrl || A(c.thumb);
+const thumbHtml = (c) => c.tile ? `<span class="thumb tile">${esc(c.tile)}</span>` : `<img class="thumb" src="${thumbSrc(c)}" alt="" loading="lazy">`;
 
 function workView() {
   const rows = CASES.map((c, i) => `
@@ -115,13 +116,13 @@ function workView() {
         <span class="title">${esc(c.title)}</span>
         <span class="meta">${esc(c.client)} · ${esc(c.side)} · ${c.year}</span>
         <span class="metric">${esc(c.metric)}<small>${esc(c.metricLabel)}</small></span>
-        <img class="thumb" src="${thumbSrc(c)}" alt="" loading="lazy">
+        ${thumbHtml(c)}
       </a>
     </li>`).join("");
 
   return `
     <section class="view">
-      <div class="hero band">
+      <div class="hero">
         <p class="eyebrow">Creative Strategist · Performance creative, copy &amp; AI production</p>
         <h1 class="display">Ideas that are measured, <em>then</em> made better.</h1>
         <div class="hero-grid">
@@ -133,7 +134,7 @@ function workView() {
           </div>
         </div>
         <div class="actions">
-          <a class="btn btn-lime" href="#cases" data-scroll="cases">See the work ↓</a>
+          <a class="btn btn-primary" href="#cases" data-scroll="cases">See the work ↓</a>
           <a class="btn btn-ghost" href="#/contact">Get in touch</a>
         </div>
       </div>
@@ -176,9 +177,9 @@ function caseView(slug) {
 function aboutView() {
   return `
     <section class="view">
-      <div class="hero band">
+      <div class="hero">
         <p class="eyebrow">About</p>
-        <h1 class="display">Agency craft. <em>Client</em> accountability.</h1>
+        <h1 class="display"><span class="line">Agency craft.</span><span class="line"><em>Client</em> accountability.</span></h1>
       </div>
       <div class="about-grid">
         <h2>Profile</h2>
