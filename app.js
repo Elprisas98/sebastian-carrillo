@@ -104,7 +104,7 @@ const CASES = [
     tile: "Samsung Galaxy",
     insight: "A script works when the creator's followers hear the creator, not the brand.",
     body: [
-      "Wrote more than 50 scripts for Samsung campaigns with leading Peruvian influencers, and coordinated directly with each creator from idea to final cut.",
+      "Wrote more than 50 scripts for Samsung campaigns with leading Peruvian influencers, and coordinated directly with each creator from the first idea to the published post.",
       "Every script was tailored to the creator's voice and to what their followers respond to, while keeping Samsung's message and product claims intact. The goal was content the creator was proud to post, the brand approved and the audience actually watched.",
       "Campaigns included the Galaxy S23 launch teasers, Galaxy Buds2 Pro and the Galaxy Trade-In promotion.",
     ],
