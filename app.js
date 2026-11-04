@@ -93,11 +93,12 @@ const CASES = [
     slug: "samsung-influencers",
     title: "Scripts for influencers",
     client: "Samsung Peru", side: "Agency · VML", year: "2022–2023",
-    metric: "4", metricLabel: "influencer videos",
+    metric: "50+", metricLabel: "influencer scripts",
     tile: "Samsung Galaxy",
-    insight: "Write for the creator's voice, not the brand's.",
+    insight: "A script works when it sounds like the creator, not the brand.",
     body: [
-      "Storytelling and scripts for Samsung campaigns with leading Peruvian influencers, covering the Galaxy S23 launch teasers, Galaxy Buds2 Pro and the Galaxy Trade-In promotion.",
+      "Wrote more than 50 scripts for Samsung campaigns with leading Peruvian influencers, adapting each one to the creator's voice and format.",
+      "The work covered the Galaxy S23 launch teasers, Galaxy Buds2 Pro and the Galaxy Trade-In promotion.",
     ],
     link: { href: BEHANCE, label: "Watch the four influencer videos on Behance ↗" },
   },
@@ -123,10 +124,10 @@ function workView() {
   return `
     <section class="view">
       <div class="hero">
-        <p class="eyebrow">Creative Strategist · Performance creative, copy &amp; AI production</p>
-        <h1 class="display">Ideas that are measured, <em>then</em> made better.</h1>
+        <p class="eyebrow">AI-native Creative Strategist · Meta, TikTok &amp; Google</p>
+        <h1 class="display">Performance data in. <em>Winning ads</em> out.</h1>
         <div class="hero-grid">
-          <p>Experience on both sides of advertising. At VML, the full creative process for Movistar, izipay and Samsung. At UCAL, the brand side: optimizing creative against business objectives and presenting results to the CEO and board.</p>
+          <p>A decade of copywriting and three years running the creative-to-performance loop on both sides of advertising: at VML for Movistar, izipay and Samsung, and in-house at UCAL, accountable to the CEO and board for every result.</p>
           <div class="stats">
             <div class="stat"><b>+45%</b><span>CTR, Movistar</span></div>
             <div class="stat"><b>−40%</b><span>Cost per lead, izipay</span></div>
@@ -138,6 +139,15 @@ function workView() {
           <a class="btn btn-ghost" href="#/contact">Get in touch</a>
         </div>
       </div>
+      <section class="process" aria-label="How the work gets done">
+        <div class="section-head"><h2>The loop</h2><span>How every case below was built</span></div>
+        <ol class="steps">
+          <li><b>Read the data</b><p>CTR, CPC, cost per lead and sales across Meta, TikTok and Google. Every element of an ad is a suspect until the numbers clear it.</p></li>
+          <li><b>Find the angle</b><p>Competitor ads pulled at scale from the Meta Ad Library, social listening and one hypothesis per product and audience.</p></li>
+          <li><b>Brief and produce</b><p>Briefs built on insights designers can act on, and prompt templates by product that ship up to 10 variations a day.</p></li>
+          <li><b>Test and iterate</b><p>Keep the winners, change one variable at a time (copy, type, color, layout) and start the next round.</p></li>
+        </ol>
+      </section>
       <div class="section-head" id="cases"><h2 class="display">Selected work</h2><span>${CASES.length} cases</span></div>
       <ul class="case-list">${rows}</ul>
     </section>`;
