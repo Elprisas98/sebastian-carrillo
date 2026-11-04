@@ -214,7 +214,7 @@ function aboutView() {
       <div class="about-grid">
         <h2>Experience</h2>
         <ul class="timeline">
-          <li><b>UCAL · Communications Coordinator, Marketing</b><span>2026 – Present</span><p>Paid digital creative, AI production, UGC creators and results presented to the CEO and board.</p></li>
+          <li><b>UCAL · Communications Coordinator, Marketing</b><span>2026 – Present</span><p>In charge of all external communications: paid digital ads, organic content, OOH and press. AI production, UGC creators and results presented to the CEO and board.</p></li>
           <li><b>VML · Senior Data Strategist</b><span>2025 – 2026</span><p>Brand and product strategy for most of the agency's brands, giving creative teams data-driven insights tied to business objectives. Trained 100+ people in applied AI.</p></li>
           <li><b>VML · Performance Lead</b><span>2024 – 2025</span><p>Movistar Peru's Creative Excellence program: CTR +45%, CPC −30%.</p></li>
           <li><b>VML · Senior Copywriter</b><span>2023 – 2024</span><p>izipay lead generation: cost per lead −40%, leads +17%. Effie Gold, Silver and Bronze. Cannes Lions Bronze for AWS & Slalom.</p></li>
