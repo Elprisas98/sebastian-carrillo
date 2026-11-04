@@ -87,7 +87,7 @@ const CASES = [
       "Vanishing Emails offers a one-click way to delete every expired promotional email. Co-developed the product idea, wrote the case video script and website copy, and built the deck with the creative director.",
       "Awarded a Cannes Lions Bronze in Innovation, 2024.",
     ],
-    link: { href: BEHANCE, label: "Watch the case video on Behance ↗" },
+    video: "https://www.youtube-nocookie.com/embed/y38ZLtFSQ64",
     imageUrls: ["https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/7d3ece185153969.655ebeda78f67.png"],
   },
   {
