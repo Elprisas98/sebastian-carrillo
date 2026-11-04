@@ -57,6 +57,7 @@ const CASES = [
     body: [
       "Built prompt templates for each product and business unit, and used them with ChatGPT, Gemini, Midjourney and Veo 3 to produce up to 10 paid digital ad variations a day in-house.",
       "Competitor research was automated with Claude, pulling large volumes of ads from the Meta Ad Library to compare angles and formats before concepting.",
+      "KPI reporting was automated with Claude and MCP connectors, so performance data reached the team fast enough to act on and iterate aggressively instead of waiting for a monthly report.",
     ],
     images: ["ucal-ai-engineering", "ucal-ai-accounting", "ucal-ai-communication", "ucal-ai-graphic-design", "ucal-ai-interiors", "ucal-ai-cpa-communication", "ucal-ai-cpa-design", "ucal-ai-cpa-interiors", "ucal-ai-film", "ucal-ai-strategist", "ucal-ai-marketing", "ucal-ai-dgp"],
   },
@@ -150,7 +151,7 @@ function workView() {
       <section class="process" aria-label="How the work gets done">
         <div class="section-head"><h2>The loop</h2><span>How every case below was built</span></div>
         <ol class="steps">
-          <li><b>Read the data</b><p>CTR, CPC, cost per lead and sales across Meta, TikTok and Google. Every element of an ad is a suspect until the numbers clear it.</p></li>
+          <li><b>Read the data</b><p>CTR, CPC, cost per lead and sales across Meta, TikTok and Google. KPI reporting automated with Claude, so decisions never wait for a monthly report.</p></li>
           <li><b>Find the angle</b><p>Competitor ads pulled at scale from the Meta Ad Library, social listening and one hypothesis per product and audience.</p></li>
           <li><b>Brief and produce</b><p>Briefs built on insights designers can act on, and prompt templates by product that ship up to 10 variations a day.</p></li>
           <li><b>Test and iterate</b><p>Keep the winners, change one variable at a time (copy, type, color, layout) and start the next round.</p></li>
