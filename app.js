@@ -64,17 +64,20 @@ const CASES = [
   {
     slug: "spec-bloqueo-ugc",
     title: "Lima's grey sky lies",
-    client: "Bloqueo (fictional sunscreen)", side: "Spec work · AI UGC", year: "2026",
+    client: "Bloqueo (fictional sunscreen)", side: "Spec work · AI social", year: "2026",
     metric: "Spec", metricLabel: "Nano Banana Pro + Veo 3.1",
-    thumb: "spec-bloqueo-ugc",
+    thumb: "spec-bloqueo-product",
     insight: "In Lima, sunscreen feels like a summer thing. The grey sky still burns.",
     body: [
-      "Spec UGC piece for a fictional sunscreen brand. The hook is a confession, not a product claim: a creator admits Lima's overcast sky fooled her, so the first second speaks to a mistake most of the audience has made.",
-      "Native TikTok format: front-camera selfie, on-screen caption in the creator's voice, and the product shown in use, never presented.",
-      "Still produced with Nano Banana Pro and animated with Veo 3.1, including Spanish dialogue with lip sync.",
+      "Spec campaign for a fictional sunscreen brand built on one local truth: for most of the year Lima is overcast, so people skip SPF, but UV goes through the clouds.",
+      "Two paid social statics carry the line in brand voice: \"El cielo está gris. El sol, no.\" and \"En Lima, el gris también quema.\" A UGC video tells the same truth as a confession, in the creator's voice, with the product shown in use, never presented.",
+      "Photography generated with Nano Banana Pro without any text, using the product shot as a reference so the stick stays identical across pieces. Typography and layout were set by hand on a grid with real typefaces (Archivo and Instrument Serif). The UGC video was animated with Veo 3.1, including Spanish dialogue.",
     ],
     mp4: "spec-bloqueo-ugc",
-    images: ["spec-bloqueo-ugc"],
+    images: [
+      ["spec-bloqueo-product", "Paid social: product"],
+      ["spec-bloqueo-face", "Paid social: lifestyle"],
+    ],
   },
   {
     slug: "spec-casa-barrio",
@@ -86,10 +89,29 @@ const CASES = [
     body: [
       "Spec vertical video for a fictional home store. The product is not a sofa but the feeling of space: a fold-down desk, a sofa bed and a mirror that makes 45 m² feel like a home.",
       "Shot as a lifestyle moment rather than a catalog, with a slow push-in and late-afternoon light, built for Reels and TikTok.",
-      "Still produced with Nano Banana Pro and animated with Kling 3.0.",
+      "The Stories ad turns the complaint around: \"Tu depa no es chico. Tus muebles son grandes.\"",
+      "Still produced with Nano Banana Pro and animated with Kling 3.0. Typography set by hand with Hanken Grotesk and Newsreader.",
     ],
     mp4: "spec-casabarrio",
-    images: ["spec-casabarrio"],
+    images: [["spec-casabarrio-story", "Stories ad"]],
+  },
+  {
+    slug: "izipay-heladizimo",
+    title: "Verano Heladizimo",
+    client: "izipay", side: "Conceptual work · VML", year: "2024",
+    metric: "Concept", metricLabel: "conceptual work",
+    thumb: "izipay-heladizimo-fans",
+    insight: "In a Lima heatwave, people walk into whichever business has air conditioning. The coolest shop on the block gets the customers.",
+    body: [
+      "In February, Lima went past 30°C and people started looking for air-conditioned places to escape the heat, usually small businesses that attracted customers without trying.",
+      "The idea, pitched to the creative director: izipay raffles air conditioners among merchants who buy a POS Android with Arisale, so their shop becomes the neighborhood's refuge from the heat. Teasers posed the problem in izipay's \"Eso no tiene sentido\" voice, and the key visual explained the mechanic in three steps. TikTok scripts dramatized it, from a shop so cold the staff wear jackets to an owner who sleeps at the shop to escape the heat at home.",
+      "Conceptual work. The pieces shown were recreated in 2026 from the original pitch, with photography generated in Nano Banana Pro and typography set by hand.",
+    ],
+    images: [
+      ["izipay-heladizimo-fans", "Teaser: \"¿Tienes más ventiladores que clientes?\""],
+      ["izipay-heladizimo-type", "Teaser: type-only post"],
+      ["izipay-heladizimo-kv", "Key visual and mechanic"],
+    ],
   },
   {
     slug: "movistar-creative-excellence",
@@ -205,7 +227,7 @@ function caseView(slug) {
   const ordered = imgs.some((im) => im.caption);
   const gallery = imgs.length ? `<div class="gallery${ordered ? " gallery-grid" : ""}">${imgs.map(figure).join("")}</div>` : "";
   const video = c.video ? `<div class="embed"><iframe src="${c.video}" title="${esc(c.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`
-    : c.mp4 ? `<div class="embed-vertical"><video src="assets/${c.mp4}.mp4" poster="${A(c.thumb)}" controls playsinline preload="metadata"></video></div>` : "";
+    : c.mp4 ? `<div class="embed-vertical"><video src="assets/${c.mp4}.mp4" poster="${A(c.mp4)}" controls playsinline preload="metadata"></video></div>` : "";
   const link = c.link ? `<a class="cta" href="${c.link.href}" target="_blank" rel="noopener">${esc(c.link.label)}</a>` : "";
 
   return `
