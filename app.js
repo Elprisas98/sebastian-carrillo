@@ -62,6 +62,55 @@ const CASES = [
     images: ["ucal-ai-engineering", "ucal-ai-accounting", "ucal-ai-communication", "ucal-ai-graphic-design", "ucal-ai-interiors", "ucal-ai-cpa-communication", "ucal-ai-cpa-design", "ucal-ai-cpa-interiors", "ucal-ai-film", "ucal-ai-strategist", "ucal-ai-marketing", "ucal-ai-dgp"],
   },
   {
+    slug: "spec-bloqueo-ugc",
+    title: "Lima's grey sky lies",
+    client: "Bloqueo (fictional sunscreen)", side: "Spec work · AI UGC", year: "2026",
+    metric: "Spec", metricLabel: "Nano Banana Pro + Veo 3.1",
+    thumb: "spec-bloqueo-ugc",
+    insight: "In Lima, sunscreen feels like a summer thing. The grey sky still burns.",
+    body: [
+      "Spec UGC piece for a fictional sunscreen brand. The hook is a confession, not a product claim: a creator admits Lima's overcast sky fooled her, so the first second speaks to a mistake most of the audience has made.",
+      "Native TikTok format: front-camera selfie, on-screen caption in the creator's voice, and the product shown in use, never presented.",
+      "Still produced with Nano Banana Pro and animated with Veo 3.1, including Spanish dialogue with lip sync.",
+    ],
+    mp4: "spec-bloqueo-ugc",
+    images: ["spec-bloqueo-ugc"],
+  },
+  {
+    slug: "spec-moradita",
+    title: "Made in a pot, like at home",
+    client: "Moradita (fictional drink)", side: "Spec work · AI social", year: "2026",
+    metric: "Spec", metricLabel: "Nano Banana Pro",
+    thumb: "spec-moradita-hero",
+    insight: "Real chicha morada is made in a pot at home. Bottled chicha tastes like it came from a box.",
+    body: [
+      "Spec social campaign for a fictional bottled chicha morada. Instead of fighting the homemade version, the brand claims it: same pot, same ingredients.",
+      "A hero post and a three-slide carousel. Slide one opens with a question, slide two proves it with the ingredient list, slide three closes on the product and where to buy it.",
+      "Produced with Nano Banana Pro. The hero image was used as a reference so the bottle and label stay consistent across every piece.",
+    ],
+    images: [
+      ["spec-moradita-hero", "Hero post"],
+      ["spec-moradita-slide1", "Carousel 1/3: the hook"],
+      ["spec-moradita-slide2", "Carousel 2/3: the proof"],
+      ["spec-moradita-slide3", "Carousel 3/3: the close"],
+    ],
+  },
+  {
+    slug: "spec-casa-barrio",
+    title: "45 m², no excuses",
+    client: "Casa Barrio (fictional home store)", side: "Spec work · AI video", year: "2026",
+    metric: "Spec", metricLabel: "Nano Banana Pro + Kling",
+    thumb: "spec-casabarrio",
+    insight: "In a small Lima apartment, nobody wants more furniture. They want more room.",
+    body: [
+      "Spec vertical video for a fictional home store. The product is not a sofa but the feeling of space: a fold-down desk, a sofa bed and a mirror that makes 45 m² feel like a home.",
+      "Shot as a lifestyle moment rather than a catalog, with a slow push-in and late-afternoon light, built for Reels and TikTok.",
+      "Still produced with Nano Banana Pro and animated with Kling 3.0.",
+    ],
+    mp4: "spec-casabarrio",
+    images: ["spec-casabarrio"],
+  },
+  {
     slug: "movistar-creative-excellence",
     title: "Price as a creative variable",
     client: "Movistar Peru", side: "Agency · VML", year: "2024–2025",
@@ -174,7 +223,8 @@ function caseView(slug) {
   const figure = ({ src, caption }) => `<figure><img src="${src}" alt="${esc(caption || c.title)}" loading="lazy">${caption ? `<figcaption>${esc(caption)}</figcaption>` : ""}</figure>`;
   const ordered = imgs.some((im) => im.caption);
   const gallery = imgs.length ? `<div class="gallery${ordered ? " gallery-grid" : ""}">${imgs.map(figure).join("")}</div>` : "";
-  const video = c.video ? `<div class="embed"><iframe src="${c.video}" title="${esc(c.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>` : "";
+  const video = c.video ? `<div class="embed"><iframe src="${c.video}" title="${esc(c.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`
+    : c.mp4 ? `<div class="embed-vertical"><video src="assets/${c.mp4}.mp4" poster="${A(c.thumb)}" controls playsinline preload="metadata"></video></div>` : "";
   const link = c.link ? `<a class="cta" href="${c.link.href}" target="_blank" rel="noopener">${esc(c.link.label)}</a>` : "";
 
   return `
@@ -235,7 +285,7 @@ function aboutView() {
           <p class="skill-label">Strategy &amp; performance</p>
           <ul class="chips"><li>Creative briefs</li><li>Angle &amp; hook research</li><li>Meta Ad Library</li><li>A/B testing</li><li>Meta Ads Manager</li><li>TikTok Ads Manager</li><li>Google Ads</li><li>Social listening</li></ul>
           <p class="skill-label">AI &amp; production</p>
-          <ul class="chips"><li>ChatGPT</li><li>Claude</li><li>Gemini</li><li>Perplexity</li><li>Midjourney</li><li>Veo 3</li><li>Canva</li><li>CapCut</li><li>Premiere Pro</li><li>Lovable</li><li>Apps Script</li></ul>
+          <ul class="chips"><li>ChatGPT</li><li>Claude</li><li>Gemini</li><li>Perplexity</li><li>Midjourney</li><li>Nano Banana</li><li>Higgsfield</li><li>Google Flow</li><li>Veo 3</li><li>Canva</li><li>CapCut</li><li>Premiere Pro</li><li>Lovable</li><li>Apps Script</li></ul>
           <p class="skill-label">Languages</p>
           <ul class="chips"><li>English (advanced)</li><li>Spanish (native)</li></ul>
         </div>
