@@ -105,8 +105,10 @@ const CASES = [
     body: [
       "In February, Lima went past 30°C and people started looking for air-conditioned places to escape the heat, usually small businesses that attracted customers without trying.",
       "The idea, pitched to the creative director: izipay raffles air conditioners among merchants who buy a POS Android with Arisale, so their shop becomes the neighborhood's refuge from the heat. Teasers posed the problem in izipay's \"Eso no tiene sentido\" voice, and the key visual explained the mechanic in three steps. TikTok scripts dramatized it, from a shop so cold the staff wear jackets to an owner who sleeps at the shop to escape the heat at home.",
-      "Conceptual work. The pieces shown were recreated in 2026 from the original pitch, with photography generated in Nano Banana Pro and typography set by hand.",
+      "The UGC video tells the whole story in 18 seconds from a merchant's phone: a bodega owner complains that customers walk in, feel the heat and leave. Two weeks later she has won the air conditioner and nobody wants to leave.",
+      "Conceptual work. The pieces shown were recreated in 2026 from the original pitch and follow izipay's own social system: the logo tab, its red and teal, captions outlined in red and a heavy rounded sans close to the brand's Museo Sans. Photography and footage were generated with Nano Banana Pro and Veo 3.1, and typography and captions were set by hand.",
     ],
+    mp4: "izipay-heladizimo-ugc",
     images: [
       ["izipay-heladizimo-fans", "Teaser: \"¿Tienes más ventiladores que clientes?\""],
       ["izipay-heladizimo-type", "Teaser: type-only post"],
