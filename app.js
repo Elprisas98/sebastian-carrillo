@@ -77,25 +77,6 @@ const CASES = [
     images: ["spec-bloqueo-ugc"],
   },
   {
-    slug: "spec-moradita",
-    title: "Made in a pot, like at home",
-    client: "Moradita (fictional drink)", side: "Spec work · AI social", year: "2026",
-    metric: "Spec", metricLabel: "Nano Banana Pro",
-    thumb: "spec-moradita-hero",
-    insight: "Real chicha morada is made in a pot at home. Bottled chicha tastes like it came from a box.",
-    body: [
-      "Spec social campaign for a fictional bottled chicha morada. Instead of fighting the homemade version, the brand claims it: same pot, same ingredients.",
-      "A hero post and a three-slide carousel. Slide one opens with a question, slide two proves it with the ingredient list, slide three closes on the product and where to buy it.",
-      "Produced with Nano Banana Pro. The hero image was used as a reference so the bottle and label stay consistent across every piece.",
-    ],
-    images: [
-      ["spec-moradita-hero", "Hero post"],
-      ["spec-moradita-slide1", "Carousel 1/3: the hook"],
-      ["spec-moradita-slide2", "Carousel 2/3: the proof"],
-      ["spec-moradita-slide3", "Carousel 3/3: the close"],
-    ],
-  },
-  {
     slug: "spec-casa-barrio",
     title: "45 m², no excuses",
     client: "Casa Barrio (fictional home store)", side: "Spec work · AI video", year: "2026",
