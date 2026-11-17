@@ -57,7 +57,6 @@ const CASES = [
     body: [
       "Built prompt templates for each product and business unit, and used them with ChatGPT, Gemini, Midjourney and Veo 3 to produce up to 10 paid digital ad variations a day in-house.",
       "Competitor research was automated with Claude, pulling large volumes of ads from the Meta Ad Library to compare angles and formats before concepting.",
-      "KPI reporting was automated with Claude and MCP connectors, so performance data reached the team fast enough to act on and iterate aggressively instead of waiting for a monthly report.",
     ],
     images: ["ucal-ai-engineering", "ucal-ai-accounting", "ucal-ai-communication", "ucal-ai-graphic-design", "ucal-ai-interiors", "ucal-ai-cpa-communication", "ucal-ai-cpa-design", "ucal-ai-cpa-interiors", "ucal-ai-film", "ucal-ai-strategist", "ucal-ai-marketing", "ucal-ai-dgp"],
   },
@@ -143,9 +142,9 @@ const CASES = [
     client: "Movistar Peru", side: "Agency · VML", year: "2024–2025",
     metric: "+45%", metricLabel: "CTR · CPC −30%",
     thumb: "movistar-chip-plan",
-    insight: "Nobody judges a price on its own. They judge it against what they already pay.",
+    insight: "People rarely judge a price on its own. They judge it against what they already pay.",
     body: [
-      "Led Movistar Peru's Creative Excellence program across home internet, mobile plans and devices, comparing static and carousel ads by CTR, clicks, engagement rate and impressions.",
+      "Led Movistar Peru's Creative Excellence program across home internet, mobile plans and devices, with ads that drove purchases in Movistar's online store. Static and carousel ads were compared by CTR, clicks, engagement rate and impressions.",
       "Putting the price up front only worked for mobile plans. The difference was the reference point: someone switching operators compares the full price with their current bill, while an existing customer only weighs what they would add to it.",
       "So the price changed shape with the ask. The full price, kept low, when the ask was to switch. Only the difference when the ask was to add a line. A bundle price with a time frame for Movistar Total. And no price at all when the message was value.",
       "Testing also confirmed that percentage discounts performed better on lower-priced plans and fixed-amount discounts on higher-priced devices, measured on both ad and sales metrics. Designers were briefed with insights rather than raw figures, each piece with one clear objective.",
@@ -187,7 +186,34 @@ const CASES = [
     ],
     link: { href: BEHANCE, label: "See selected videos on Behance ↗" },
   },
+  {
+    slug: "reporting-loop",
+    title: "Reporting that writes itself",
+    client: "UCAL & VML", side: "Brand side & agency", year: "2024–2026",
+    metric: "−80%", metricLabel: "hours on paid media reporting",
+    thumb: "loop-reporting",
+    insight: "The slowest part of a creative loop is rarely the creative. It is waiting for someone to put the numbers together.",
+    body: [
+      "At UCAL, paid media reporting for Google and Meta was fully automated with Claude and MCP connectors. Performance data now reaches the team in time to shape the next round of concepts, instead of arriving in a monthly report.",
+      "At VML, taught account executives to automate the monthly social media reports for every brand, cutting the time spent on them by 70%, and trained 100+ people across VML Peru and the LATAM network in applied AI.",
+      "Also delivered practical generative AI workshops for teams at Nestlé, Interbank, Intercorp, La Rambla, La Tinka, PUCP and WPP.",
+      "At UCAL, the hours spent on paid media reporting fell by 80%.",
+    ],
+    wide: true,
+    images: [
+      ["loop-reporting", "UCAL: the automated reporting loop"],
+      ["loop-enablement", "VML: AI enablement"],
+    ],
+  },
 ];
+
+// Display order: results first, then conceptual and spec work.
+const ORDER = [
+  "movistar-creative-excellence", "ucal-differentiators", "ucal-business-school", "ucal-transfers",
+  "ucal-ai-production", "reporting-loop", "aws-vanishing-emails", "samsung-influencers",
+  "izipay-heladizimo", "spec-baldecash", "spec-bloqueo-ugc", "spec-casa-barrio",
+];
+CASES.sort((a, b) => ORDER.indexOf(a.slug) - ORDER.indexOf(b.slug));
 
 // Spanish copy for each case, keyed by slug. Anything missing falls back to English.
 const ES = {
@@ -224,8 +250,18 @@ const ES = {
     body: [
       "Plantillas de prompts por producto y unidad de negocio, usadas con ChatGPT, Gemini, Midjourney y Veo 3 para producir en casa hasta 10 variaciones de anuncios al día.",
       "La investigación de la competencia se automatizó con Claude, que extrae grandes volúmenes de anuncios de la Biblioteca de anuncios de Meta para comparar ángulos y formatos antes de conceptualizar.",
-      "Los reportes de KPIs se automatizaron con Claude y conectores MCP, así los datos llegaban al equipo a tiempo para actuar e iterar, sin esperar un reporte mensual.",
     ],
+  },
+  "reporting-loop": {
+    title: "El reporte se arma solo", side: "Lado marca y agencia", metricLabel: "horas en reportería de pauta",
+    insight: "La parte más lenta del ciclo creativo casi nunca es la creatividad. Es esperar a que alguien junte los números.",
+    body: [
+      "En UCAL, la reportería de pauta de Google y Meta se automatizó por completo con Claude y conectores MCP. Ahora los datos llegan al equipo a tiempo para definir la siguiente ronda de conceptos, en vez de llegar en un reporte mensual.",
+      "En VML, capacitación a los ejecutivos de cuentas para automatizar los reportes mensuales de redes de todas las marcas, con 70% menos tiempo, y formación en IA aplicada para más de 100 personas de VML Perú y la red LATAM.",
+      "Además, talleres prácticos de IA generativa para equipos de Nestlé, Interbank, Intercorp, La Rambla, La Tinka, PUCP y WPP.",
+      "En UCAL, las horas dedicadas a la reportería de pauta bajaron 80%.",
+    ],
+    captions: ["UCAL: el ciclo de reportería automatizado", "VML: habilitación en IA"],
   },
   "spec-baldecash": {
     side: "Trabajo especulativo · sin encargo", metric: "Spec",
@@ -272,9 +308,9 @@ const ES = {
   },
   "movistar-creative-excellence": {
     title: "El precio como variable creativa", client: "Movistar Perú", side: "Agencia · VML",
-    insight: "Nadie juzga un precio por sí solo. Lo juzga contra lo que ya paga.",
+    insight: "Casi nadie juzga un precio por sí solo. Lo juzga contra lo que ya paga.",
     body: [
-      "Liderazgo del programa Creative Excellence de Movistar Perú para internet hogar, planes móviles y equipos, comparando anuncios estáticos y carruseles por CTR, clics, tasa de engagement e impresiones.",
+      "Liderazgo del programa Creative Excellence de Movistar Perú para internet hogar, planes móviles y equipos, con anuncios que llevaban a comprar en la tienda online de Movistar. Los estáticos y carruseles se comparaban por CTR, clics, tasa de engagement e impresiones.",
       "Poner el precio adelante solo funcionaba en planes móviles. La diferencia era el punto de referencia: quien cambia de operador compara el precio completo con su recibo actual, mientras que un cliente actual solo evalúa cuánto le sumaría.",
       "Entonces el precio cambió de forma según el pedido. El precio completo, bajo, cuando el pedido era cambiarse. Solo la diferencia cuando el pedido era sumar una línea. Un precio de paquete con plazo para Movistar Total. Y ningún precio cuando el mensaje era valor.",
       "Las pruebas también confirmaron que los descuentos en porcentaje rendían mejor en planes de menor precio y los descuentos en monto fijo en equipos de mayor precio, medido tanto en métricas de anuncios como de ventas. Los diseñadores recibían briefs con insights en lugar de cifras, y cada pieza tenía un solo objetivo.",
@@ -335,12 +371,12 @@ function workView() {
   return `
     <section class="view">
       <div class="hero">
-        <p class="eyebrow">${T("AI-native Creative Strategist · Meta, TikTok &amp; Google", "Creative Strategist nativo en IA · Meta, TikTok y Google")}</p>
-        <h1 class="display">${T("Performance data in. <em>Winning ads</em> out.", "Entran datos. Salen <em>anuncios que ganan</em>.")}</h1>
+        <p class="eyebrow">${T("Performance Creative Strategist · Meta, TikTok &amp; Google", "Performance Creative Strategist · Meta, TikTok y Google")}</p>
+        <h1 class="display">${T("Ads that say <em>one thing</em>. And sell it.", "Anuncios que dicen <em>una sola cosa</em>. Y la venden.")}</h1>
         <div class="hero-grid">
           <p>${T(
-            "A decade of copywriting and three years running the creative-to-performance loop on both sides of advertising: at VML for Movistar, izipay and Samsung, and in-house at UCAL, accountable to the CEO and board for every result.",
-            "Una década de redacción publicitaria y tres años a cargo del ciclo entre creatividad y resultados en los dos lados de la publicidad: en VML para Movistar, izipay y Samsung, y dentro de UCAL, con responsabilidad por cada resultado ante el CEO y el directorio.")}</p>
+            "I make ads clearer. Most ads try to say too much, in words only an expert would follow. I find the one idea that matters to someone who has never heard of the brand, say it plainly, and let the results decide the next round. Agency side at VML for Movistar, izipay and Samsung. Brand side at UCAL, leading the campaigns, the agencies and everything the university says publicly.",
+            "Hago anuncios más claros. La mayoría intenta decir demasiado, con palabras que solo entendería un experto. Busco la idea que le importa a alguien que nunca oyó de la marca, la digo simple y dejo que los resultados decidan la siguiente ronda. En agencia, en VML para Movistar, izipay y Samsung. En marca, en UCAL, a cargo de las campañas, las agencias y todo lo que la universidad dice en público.")}</p>
           <div class="stats">
             <div class="stat"><b>+45%</b><span>CTR, Movistar</span></div>
             <div class="stat"><b>−40%</b><span>${T("Cost per lead, izipay", "Costo por lead, izipay")}</span></div>
@@ -351,6 +387,7 @@ function workView() {
           <a class="btn btn-primary" href="#cases" data-scroll="cases">${T("See the work ↓", "Ver el trabajo ↓")}</a>
           <a class="btn btn-ghost" href="#/contact">${T("Get in touch", "Conversemos")}</a>
         </div>
+        <div class="brands"><span>${T("Brands", "Marcas")}</span><ul>${["Movistar", "izipay", "Samsung", "Santander", "AWS &amp; Slalom", "Cementos Pacasmayo", "Cementos Sol", "Viru", "Kulhaus", "Sublime", "UCAL"].map((b) => `<li>${b}</li>`).join("")}</ul></div>
       </div>
       <section class="process" aria-label="${T("How the work gets done", "Cómo se hace el trabajo")}">
         <div class="section-head"><h2>${T("The loop", "El ciclo")}</h2><span>${T("How every case below was built", "Cómo se construyó cada caso")}</span></div>
@@ -385,7 +422,7 @@ function caseView(slug) {
   ];
   const figure = ({ src, caption }) => `<figure><img src="${src}" alt="${esc(caption || c.title)}" loading="lazy">${caption ? `<figcaption>${esc(caption)}</figcaption>` : ""}</figure>`;
   const ordered = imgs.some((im) => im.caption);
-  const gallery = imgs.length ? `<div class="gallery${ordered ? " gallery-grid" : ""}${c.portrait ? " gallery-portrait" : ""}">${imgs.map(figure).join("")}</div>` : "";
+  const gallery = imgs.length ? `<div class="gallery${ordered ? " gallery-grid" : ""}${c.portrait ? " gallery-portrait" : ""}${c.wide ? " gallery-wide" : ""}">${imgs.map(figure).join("")}</div>` : "";
   const video = c.video ? `<div class="embed"><iframe src="${c.video}" title="${esc(c.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`
     : c.mp4 ? `<div class="embed-vertical"><video src="assets/${c.mp4}.mp4" poster="${A(c.mp4)}" controls playsinline preload="metadata"></video></div>` : "";
   const link = c.link ? `<a class="cta" href="${c.link.href}" target="_blank" rel="noopener">${esc(c.link.label)}</a>` : "";
@@ -425,8 +462,8 @@ function aboutView() {
         <h2>${T("Profile", "Perfil")}</h2>
         <div>
           <p class="lead">${T(
-            "Creative strategist who has produced, evaluated and iterated thousands of ads, and keeps training in AI image and video generation to improve results with each round.",
-            "Creative strategist con miles de anuncios producidos, evaluados e iterados, en formación constante en generación de imagen y video con IA para mejorar los resultados en cada ronda.")}</p>
+            "Every piece I brief has one objective, which keeps feedback honest and fast. When something is not working, I explain the objective and the reason, not just the fix. That is why I am usually the one asked to lead big campaigns, crisis messages and the work with agencies. Along the way I automate whatever slows the team down, so the next round starts sooner.",
+            "Cada pieza que briefeo tiene un solo objetivo, y eso mantiene el feedback honesto y rápido. Cuando algo no funciona, explico el objetivo y la razón, no solo el arreglo. Por eso suelo ser a quien le piden liderar las campañas grandes, los mensajes de crisis y el trabajo con agencias. En el camino automatizo lo que frena al equipo, para que la siguiente ronda empiece antes.")}</p>
         </div>
       </div>
       <div class="about-grid">
@@ -436,8 +473,8 @@ function aboutView() {
             "In charge of all external communications: paid digital ads, organic content, OOH and press. AI production, UGC creators and results presented to the CEO and board.",
             "A cargo de toda la comunicación externa: pauta digital, contenido orgánico, OOH y prensa. Producción con IA, creadores UGC y resultados presentados al CEO y al directorio."))}
           ${job("VML · Senior Data Strategist", "2025 – 2026", T(
-            "Brand and product strategy for most of the agency's brands, giving creative teams data-driven insights tied to business objectives. Trained 100+ people in applied AI.",
-            "Estrategia de marca y de producto para la mayoría de las marcas de la agencia, con insights basados en datos y atados a objetivos de negocio para los equipos creativos. Capacitación en IA aplicada a más de 100 personas."))}
+            "Brand and communication strategy for Santander Consumer Peru, Cementos Sol and izipay, with data-driven insights so creative teams worked toward each client's business objective. Trained 100+ people in applied AI.",
+            "Estrategia de marca y de comunicación para Santander Consumer Perú, Cementos Sol e izipay, con insights basados en datos para que los equipos creativos trabajaran hacia el objetivo de negocio de cada cliente. Capacitación en IA aplicada a más de 100 personas."))}
           ${job("VML · Performance Lead", "2024 – 2025", T(
             "Movistar Peru's Creative Excellence program: CTR +45%, CPC −30%.",
             "Programa Creative Excellence de Movistar Perú: CTR +45%, CPC −30%."))}
@@ -460,6 +497,20 @@ function aboutView() {
         </ul>
       </div>
       <div class="about-grid">
+        <h2>${T("Also", "Además")}</h2>
+        <ul class="timeline">
+          ${job(T("Effie Awards case writer", "Redacción de casos Effie"), "VML", T(
+            "Entries for Nestlé, izipay and UTP: each campaign distilled into its strongest results, and why it worked.",
+            "Casos para Nestlé, izipay y UTP: cada campaña reducida a sus resultados más fuertes y a por qué funcionó."))}
+          ${job("The Future 100", "VML", T(
+            "Research and writing for The Future 100, VML's annual trends report.",
+            "Investigación y redacción para The Future 100, el reporte anual de tendencias de VML."))}
+          ${job(T("AI workshops", "Talleres de IA"), T("2024 – Present", "2024 – Actualidad"), T(
+            "Practical generative AI workshops for teams at Nestlé, Interbank, Intercorp, La Rambla, La Tinka, PUCP and WPP.",
+            "Talleres prácticos de IA generativa para equipos de Nestlé, Interbank, Intercorp, La Rambla, La Tinka, PUCP y WPP."))}
+        </ul>
+      </div>
+      <div class="about-grid">
         <h2>${T("Toolkit", "Herramientas")}</h2>
         <div>
           <p class="skill-label">${T("Strategy &amp; performance", "Estrategia y performance")}</p>
@@ -467,7 +518,7 @@ function aboutView() {
           <p class="skill-label">${T("AI &amp; production", "IA y producción")}</p>
           <ul class="chips"><li>ChatGPT</li><li>Claude</li><li>Gemini</li><li>Perplexity</li><li>Midjourney</li><li>Nano Banana</li><li>Higgsfield</li><li>Google Flow</li><li>Veo 3</li><li>Canva</li><li>CapCut</li><li>Premiere Pro</li><li>Lovable</li><li>Apps Script</li></ul>
           <p class="skill-label">${T("Languages", "Idiomas")}</p>
-          <ul class="chips"><li>${T("English (advanced)", "Inglés (avanzado)")}</li><li>${T("Spanish (native)", "Español (nativo)")}</li></ul>
+          <ul class="chips"><li>${T("English (C1, Cambridge CAE)", "Inglés (C1, Cambridge CAE)")}</li><li>${T("Spanish (native)", "Español (nativo)")}</li></ul>
         </div>
       </div>
       <div class="about-grid">
@@ -484,7 +535,7 @@ function contactView() {
       <h1 class="display">${T("Let's make ads that <em>earn</em> their budget.", "Hagamos anuncios que <em>se ganen</em> su presupuesto.")}</h1>
       <div class="contact-links">
         <a href="mailto:scbrake98@gmail.com">scbrake98@gmail.com<span>${T("Email", "Correo")}</span></a>
-        <a href="https://www.linkedin.com/in/sebastiancarrillo-brake-a62b37145" target="_blank" rel="noopener">LinkedIn<span>${T("Profile ↗", "Perfil ↗")}</span></a>
+        <a href="https://www.linkedin.com/in/sebastian-carrillo-brake-a62b37145" target="_blank" rel="noopener">LinkedIn<span>${T("Profile ↗", "Perfil ↗")}</span></a>
         <a href="${BEHANCE}" target="_blank" rel="noopener">Behance<span>${T("Earlier work ↗", "Trabajo anterior ↗")}</span></a>
       </div>
     </section>`;
