@@ -189,21 +189,17 @@ const CASES = [
   {
     slug: "reporting-loop",
     title: "Reporting that writes itself",
-    client: "UCAL & VML", side: "Brand side & agency", year: "2024–2026",
+    client: "UCAL", side: "Brand side", year: "2026",
     metric: "−80%", metricLabel: "hours on paid media reporting",
     thumb: "loop-reporting",
     insight: "The slowest part of a creative loop is rarely the creative. It is waiting for someone to put the numbers together.",
     body: [
-      "At UCAL, paid media reporting for Google and Meta was fully automated with Claude and MCP connectors. Performance data now reaches the team in time to shape the next round of concepts, instead of arriving in a monthly report.",
-      "At VML, taught account executives to automate the monthly social media reports for every brand, cutting the time spent on them by 70%, and trained 100+ people across VML Peru and the LATAM network in applied AI.",
-      "Also delivered practical generative AI workshops for teams at Nestlé, Interbank, Intercorp, La Rambla, La Tinka, PUCP and WPP.",
-      "At UCAL, the hours spent on paid media reporting fell by 80%.",
+      "Paid media reporting for Google and Meta was fully automated with Claude and MCP connectors. Performance data now reaches the team in time to shape the next round of concepts, instead of arriving in a monthly report.",
+      "The time that used to go into putting the numbers together now goes into deciding what to test next.",
+      "The hours spent on paid media reporting fell by 80%.",
     ],
     wide: true,
-    images: [
-      ["loop-reporting", "UCAL: the automated reporting loop"],
-      ["loop-enablement", "VML: AI enablement"],
-    ],
+    images: [["loop-reporting", "The automated reporting loop"]],
   },
 ];
 
@@ -253,15 +249,14 @@ const ES = {
     ],
   },
   "reporting-loop": {
-    title: "El reporte se arma solo", side: "Lado marca y agencia", metricLabel: "horas en reportería de pauta",
+    title: "El reporte se arma solo", side: "Lado marca", metricLabel: "horas en reportería de pauta",
     insight: "La parte más lenta del ciclo creativo casi nunca es la creatividad. Es esperar a que alguien junte los números.",
     body: [
-      "En UCAL, la reportería de pauta de Google y Meta se automatizó por completo con Claude y conectores MCP. Ahora los datos llegan al equipo a tiempo para definir la siguiente ronda de conceptos, en vez de llegar en un reporte mensual.",
-      "En VML, capacitación a los ejecutivos de cuentas para automatizar los reportes mensuales de redes de todas las marcas, con 70% menos tiempo, y formación en IA aplicada para más de 100 personas de VML Perú y la red LATAM.",
-      "Además, talleres prácticos de IA generativa para equipos de Nestlé, Interbank, Intercorp, La Rambla, La Tinka, PUCP y WPP.",
-      "En UCAL, las horas dedicadas a la reportería de pauta bajaron 80%.",
+      "La reportería de pauta de Google y Meta se automatizó por completo con Claude y conectores MCP. Ahora los datos llegan al equipo a tiempo para definir la siguiente ronda de conceptos, en vez de llegar en un reporte mensual.",
+      "El tiempo que antes se iba en juntar los números ahora se va en decidir qué probar después.",
+      "Las horas dedicadas a la reportería de pauta bajaron 80%.",
     ],
-    captions: ["UCAL: el ciclo de reportería automatizado", "VML: habilitación en IA"],
+    captions: ["El ciclo de reportería automatizado"],
   },
   "spec-baldecash": {
     side: "Trabajo especulativo · sin encargo", metric: "Spec",
