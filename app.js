@@ -378,8 +378,8 @@ function workView() {
         <h1 class="display">${T("Ads that say <em>one thing</em>. And sell it.", "Anuncios que dicen <em>una sola cosa</em>. Y la venden.")}</h1>
         <div class="hero-grid">
           <p>${T(
-            "I make ads clearer. Most ads try to say too much, in words only an expert would follow. I find the one idea that matters to someone who has never heard of the brand, say it plainly, and let the results decide the next round. Agency side at VML for Movistar, izipay and Samsung. Brand side at UCAL, leading the campaigns, the agencies and everything the university says publicly.",
-            "Hago anuncios más claros. La mayoría intenta decir demasiado, con palabras que solo entendería un experto. Busco la idea que le importa a alguien que nunca oyó de la marca, la digo simple y dejo que los resultados decidan la siguiente ronda. En agencia, en VML para Movistar, izipay y Samsung. En marca, en UCAL, a cargo de las campañas, las agencias y todo lo que la universidad dice en público.")}</p>
+            "I make ads clearer. Most ads try to say too much, in words only an expert would follow. I find the one idea that matters to someone who has never heard of the brand, say it plainly, and let the results decide the next round. Agency side at VML, mainly for Movistar and izipay, across telecom, payments, banking, cloud, construction, agro-export, retail and consumer goods. Brand side at UCAL, leading the campaigns, the agencies and everything the university says publicly.",
+            "Hago anuncios más claros. La mayoría intenta decir demasiado, con palabras que solo entendería un experto. Busco la idea que le importa a alguien que nunca oyó de la marca, la digo simple y dejo que los resultados decidan la siguiente ronda. En agencia, en VML, principalmente para Movistar e izipay, en telecomunicaciones, pagos, banca, nube, construcción, agroexportación, retail y consumo masivo. En marca, en UCAL, a cargo de las campañas, las agencias y todo lo que la universidad dice en público.")}</p>
           <div class="stats">
             <div class="stat"><b>+45%</b><span>CTR, Movistar</span></div>
             <div class="stat"><b>−40%</b><span>${T("Cost per lead, izipay", "Costo por lead, izipay")}</span></div>
@@ -390,7 +390,7 @@ function workView() {
           <a class="btn btn-primary" href="#cases" data-scroll="cases">${T("See the work ↓", "Ver el trabajo ↓")}</a>
           <a class="btn btn-ghost" href="#/contact">${T("Get in touch", "Conversemos")}</a>
         </div>
-        <div class="brands"><span>${T("Brands", "Marcas")}</span><ul>${["Movistar", "izipay", "Samsung", "Santander", "AWS &amp; Slalom", "Cementos Pacasmayo", "Cementos Sol", "Viru", "Kulhaus", "Sublime", "UCAL"].map((b) => `<li>${b}</li>`).join("")}</ul></div>
+        <div class="brands"><span>${T("Brands", "Marcas")}</span><ul>${["Movistar", "izipay", "Santander", "AWS &amp; Slalom", "Cementos Pacasmayo", "Cementos Sol", "Viru", "Kulhaus", "Sublime", "UCAL"].map((b) => `<li>${b}</li>`).join("")}</ul></div>
       </div>
       <section class="process" aria-label="${T("How the work gets done", "Cómo se hace el trabajo")}">
         <div class="section-head"><h2>${T("The loop", "El ciclo")}</h2><span>${T("How every case below was built", "Cómo se construyó cada caso")}</span></div>
@@ -486,8 +486,8 @@ function aboutView() {
             "izipay lead generation: cost per lead −40%, leads +17%. Effie Gold, Silver and Bronze. Cannes Lions Bronze for AWS &amp; Slalom.",
             "Generación de leads para izipay: costo por lead −40%, leads +17%. Effie Oro, Plata y Bronce. Cannes Lions Bronce para AWS &amp; Slalom."))}
           ${job("VML · Senior Content Manager", "2022 – 2023", T(
-            "Samsung, Cementos Pacasmayo, Viru and Kulhaus: consumer electronics, construction, agro-export and retail.",
-            "Samsung, Cementos Pacasmayo, Viru y Kulhaus: tecnología de consumo, construcción, agroexportación y retail."))}
+            "Cementos Pacasmayo, Viru and Kulhaus, plus consumer electronics: construction, agro-export, retail and consumer tech.",
+            "Cementos Pacasmayo, Viru y Kulhaus, además de tecnología de consumo: construcción, agroexportación, retail y tecnología."))}
           ${job("Fiverr · Creative Copywriter", "2016 – 2022", T(
             "English-language copy for international clients.",
             "Copy en inglés para clientes internacionales."))}
