@@ -84,7 +84,7 @@ const CASES = [
     slug: "spec-baldecash",
     title: "Tu talento no necesita historial",
     client: "BaldeCash", side: "Spec work · unsolicited", year: "2026",
-    metric: "Spec", metricLabel: "Nano Banana Pro + Kling 3.0",
+    metric: "5", metricLabel: "pieces: Reel, carousel, static",
     thumb: "spec-baldecash-ugc",
     insight: "\"I have the talent. What I don't have is a credit history.\" Banks judge students on something they have not had the chance to build yet.",
     body: [
@@ -106,7 +106,7 @@ const CASES = [
     slug: "spec-bloqueo-ugc",
     title: "Lima's grey sky lies",
     client: "Bloqueo (fictional sunscreen)", side: "Spec work · AI social", year: "2026",
-    metric: "Spec", metricLabel: "Nano Banana Pro + Veo 3.1",
+    metric: "3", metricLabel: "pieces: 2 statics + UGC",
     thumb: "spec-bloqueo-product",
     insight: "In Lima, sunscreen feels like a summer thing. The grey sky still burns.",
     body: [
@@ -124,7 +124,7 @@ const CASES = [
     slug: "spec-casa-barrio",
     title: "45 m², no excuses",
     client: "Casa Barrio (fictional home store)", side: "Spec work · AI UGC", year: "2026",
-    metric: "Spec", metricLabel: "Nano Banana Pro + Veo 3.1",
+    metric: "17 s", metricLabel: "before-and-after UGC",
     thumb: "spec-casabarrio-ugc",
     insight: "Everyone in Lima complains their apartment is small. Usually the apartment is fine. The furniture is too big.",
     body: [
@@ -276,7 +276,7 @@ const ES = {
     mp4Captions: ["Gancho A: el vuelo", "Gancho B: la mañana después", "Gancho C: hot yoga"],
   },
   "spec-baldecash": {
-    side: "Trabajo especulativo · sin encargo", metric: "Spec",
+    side: "Trabajo especulativo · sin encargo", metric: "5", metricLabel: "piezas: Reel, carrusel y estático",
     insight: "\"Tengo el talento. Lo que no tengo es historial.\" El banco mide al estudiante por algo que todavía no tuvo oportunidad de construir.",
     body: [
       "Propuesta especulativa para BaldeCash, la fintech peruana que financia laptops a estudiantes sin historial crediticio ni garante. Su pauta habla de producto y precio; la oportunidad era llevar a los anuncios el argumento que solo ellos pueden usar.",
@@ -287,6 +287,7 @@ const ES = {
     captions: ["Carrusel 1/3: el meme", "Carrusel 2/3: la frase", "Carrusel 3/3: la oferta", "Estático: desde el cel vs. pantalla completa"],
   },
   "spec-bloqueo-ugc": {
+    metricLabel: "piezas: 2 estáticos + UGC",
     title: "El cielo gris de Lima miente", client: "Bloqueo (protector solar ficticio)", side: "Trabajo especulativo · social con IA",
     insight: "En Lima, el bloqueador parece cosa de verano. El cielo gris quema igual.",
     body: [
@@ -297,6 +298,7 @@ const ES = {
     captions: ["Pauta: producto", "Pauta: lifestyle"],
   },
   "spec-casa-barrio": {
+    metricLabel: "UGC de antes y después",
     title: "45 m², sin excusas", client: "Casa Barrio (tienda de hogar ficticia)", side: "Trabajo especulativo · UGC con IA",
     insight: "En Lima todos se quejan de que su depa es chico. Casi siempre el depa está bien. Los muebles son demasiado grandes.",
     body: [
@@ -360,7 +362,7 @@ const thumbSrc = (c) => c.thumbUrl || A(c.thumb);
 const thumbHtml = (c) => c.tile ? `<span class="thumb tile">${esc(c.tile)}</span>` : `<img class="thumb" src="${thumbSrc(c)}" alt="" loading="lazy">`;
 
 function workView() {
-  const rows = CASES.map(loc).map((c, i) => `
+  const row = (c, i) => `
     <li class="case-row">
       <a href="#/work/${c.slug}">
         <span class="num">${String(i + 1).padStart(2, "0")}</span>
@@ -369,7 +371,13 @@ function workView() {
         <span class="metric">${esc(c.metric)}<small>${esc(c.metricLabel)}</small></span>
         ${thumbHtml(c)}
       </a>
-    </li>`).join("");
+    </li>`;
+  const all = CASES.map(loc);
+  const isSpec = (c) => c.slug.startsWith("spec-");
+  const real = all.filter((c) => !isSpec(c));
+  const spec = all.filter(isSpec);
+  const rows = real.map((c, i) => row(c, i)).join("");
+  const specRows = spec.map((c, i) => row(c, real.length + i)).join("");
 
   return `
     <section class="view">
@@ -378,8 +386,8 @@ function workView() {
         <h1 class="display">${T("Ads that say <em>one thing</em>. And sell it.", "Anuncios que dicen <em>una sola cosa</em>. Y la venden.")}</h1>
         <div class="hero-grid">
           <p>${T(
-            "I make ads clearer. Most ads try to say too much, in words only an expert would follow. I find the one idea that matters to someone who has never heard of the brand, say it plainly, and let the results decide the next round. Agency side at VML, mainly for Movistar and izipay, across telecom, payments, banking, cloud, construction, agro-export, retail and consumer goods. Brand side at UCAL, leading the campaigns, the agencies and everything the university says publicly.",
-            "Hago anuncios más claros. La mayoría intenta decir demasiado, con palabras que solo entendería un experto. Busco la idea que le importa a alguien que nunca oyó de la marca, la digo simple y dejo que los resultados decidan la siguiente ronda. En agencia, en VML, principalmente para Movistar e izipay, en telecomunicaciones, pagos, banca, nube, construcción, agroexportación, retail y consumo masivo. En marca, en UCAL, a cargo de las campañas, las agencias y todo lo que la universidad dice en público.")}</p>
+            "I make ads clearer: one idea that matters to someone who has never heard of the brand, said plainly, then the results decide the next round. Agency side at VML for Movistar and izipay. Brand side at UCAL, leading the campaigns and the agencies.",
+            "Hago anuncios más claros: una idea que le importe a alguien que nunca oyó de la marca, dicha simple, y que los resultados decidan la siguiente ronda. En agencia, en VML, para Movistar e izipay. En marca, en UCAL, a cargo de las campañas y las agencias.")}</p>
           <div class="stats">
             <div class="stat"><b>+45%</b><span>CTR, Movistar</span></div>
             <div class="stat"><b>−40%</b><span>${T("Cost per lead, izipay", "Costo por lead, izipay")}</span></div>
@@ -388,9 +396,11 @@ function workView() {
         </div>
         <div class="actions">
           <a class="btn btn-primary" href="#cases" data-scroll="cases">${T("See the work ↓", "Ver el trabajo ↓")}</a>
-          <a class="btn btn-ghost" href="#/contact">${T("Get in touch", "Conversemos")}</a>
+          <a class="btn btn-ghost" href="assets/cv-sebastian-carrillo-brake.pdf" target="_blank" rel="noopener">${T("Download CV", "Descargar CV")}</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/sebastian-carrillo-brake-a62b37145" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
         <div class="brands"><span>${T("Brands", "Marcas")}</span><ul>${["Movistar", "izipay", "Santander", "AWS &amp; Slalom", "Cementos Pacasmayo", "Cementos Sol", "Viru", "Kulhaus", "Sublime", "UCAL"].map((b) => `<li>${b}</li>`).join("")}</ul></div>
+        <div class="brands"><span>${T("Industries", "Industrias")}</span><p class="industries">${T("Telecom · Payments · Banking · Cloud · Construction · Agro-export · Retail · Consumer goods · Education", "Telecomunicaciones · Pagos · Banca · Nube · Construcción · Agroexportación · Retail · Consumo masivo · Educación")}</p></div>
       </div>
       <section class="process" aria-label="${T("How the work gets done", "Cómo se hace el trabajo")}">
         <div class="section-head"><h2>${T("The loop", "El ciclo")}</h2><span>${T("How every case below was built", "Cómo se construyó cada caso")}</span></div>
@@ -409,8 +419,10 @@ function workView() {
             "Se quedan los ganadores, se cambia una variable a la vez (copy, tipografía, color, layout) y empieza la siguiente ronda.")}</p></li>
         </ol>
       </section>
-      <div class="section-head" id="cases"><h2 class="display">${T("Selected work", "Trabajo seleccionado")}</h2><span>${CASES.length} ${T("cases", "casos")}</span></div>
+      <div class="section-head" id="cases"><h2 class="display">${T("Selected work", "Trabajo seleccionado")}</h2><span>${real.length} ${T("cases with results", "casos con resultados")}</span></div>
       <ul class="case-list">${rows}</ul>
+      <div class="section-head spec-head"><h2 class="display">${T("AI spec work", "Trabajo especulativo con IA")}</h2><span>${T("Unsolicited ads, made end to end with AI", "Anuncios sin encargo, hechos de principio a fin con IA")}</span></div>
+      <ul class="case-list">${specRows}</ul>
     </section>`;
 }
 
