@@ -154,6 +154,10 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); min-heig
 .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .embed-vertical { width: min(100%, 380px); aspect-ratio: 9 / 16; margin: 0 0 32px; background: var(--petrol); border-radius: 12px; overflow: hidden; }
 .embed-vertical video { width: 100%; height: 100%; display: block; object-fit: cover; }
+.video-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 0 0 32px; }
+.video-row figure { margin: 0; }
+.video-row .embed-vertical { width: 100%; margin: 0 0 10px; }
+.video-row figcaption { font-size: 14px; font-weight: 500; }
 .cta { display: inline-flex; margin: 0 0 32px; padding: 13px 22px; border-radius: 999px; background: var(--petrol); color: var(--white); font-weight: 500; text-decoration: none; transition: background .25s var(--ease); }
 .cta:hover { background: var(--coral); }
 

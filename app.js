@@ -61,6 +61,26 @@ const CASES = [
     images: ["ucal-ai-engineering", "ucal-ai-accounting", "ucal-ai-communication", "ucal-ai-graphic-design", "ucal-ai-interiors", "ucal-ai-cpa-communication", "ucal-ai-cpa-design", "ucal-ai-cpa-interiors", "ucal-ai-film", "ucal-ai-strategist", "ucal-ai-marketing", "ucal-ai-dgp"],
   },
   {
+    slug: "spec-liquidiv",
+    title: "Water alone isn't keeping up",
+    client: "Liquid I.V.", side: "Spec work · unsolicited", year: "2026",
+    metric: "3", metricLabel: "hooks to A/B test",
+    thumb: "spec-liquidiv-a",
+    insight: "Nobody notices they're dehydrated until water alone stops keeping up: after a long flight, an open bar, a hot class.",
+    body: [
+      "Spec direct-response ad for Liquid I.V. Sugar-Free, built the way a performance team tests: one body and one close, three hooks, each aimed at a different moment and audience.",
+      "Hook A, travel: \"6 hour flight. 1 tiny cup of water.\" Hook B, the morning after a wedding: \"the open bar was free. this isn't.\", without promising a hangover cure. Hook C, fitness: \"me thinking water is enough:\". No dialogue, native captions, the problem shown, not explained.",
+      "The shared body is the ritual: the stick tears, the powder blooms in the water, the bottle shakes, \"Same water. Better hydration.\" The close uses only the claim the brand already makes, better hydration than water alone, with the real Sugar-Free pack and a \"Shop Sugar-Free\" button.",
+      "Hooks were generated with Nano Banana Pro and the product shots with GPT Image 2, using the real pack as a reference so the label stays exact, then animated with Kling 3.0. Sound design generated with ElevenLabs, close typography set by hand. Not commissioned or published by Liquid I.V.",
+    ],
+    mp4s: [
+      ["spec-liquidiv-a", "Hook A: the flight"],
+      ["spec-liquidiv-b", "Hook B: the morning after"],
+      ["spec-liquidiv-c", "Hook C: hot yoga"],
+    ],
+    portrait: true,
+  },
+  {
     slug: "spec-baldecash",
     title: "Tu talento no necesita historial",
     client: "BaldeCash", side: "Spec work · unsolicited", year: "2026",
@@ -173,20 +193,6 @@ const CASES = [
     video: "https://www.youtube-nocookie.com/embed/y38ZLtFSQ64",
   },
   {
-    slug: "samsung-influencers",
-    title: "Influencer content for Samsung",
-    client: "Samsung Peru", side: "Agency · VML", year: "2022–2023",
-    metric: "50+", metricLabel: "influencer scripts",
-    tile: "Samsung Galaxy",
-    insight: "A script works when the creator's followers hear the creator, not the brand.",
-    body: [
-      "Wrote more than 50 scripts for Samsung campaigns with leading Peruvian influencers, and coordinated directly with each creator from the first idea to the published post.",
-      "Every script was tailored to the creator's voice and to what their followers respond to, while keeping Samsung's message and product claims intact. The goal was content the creator was proud to post, the brand approved and the audience actually watched.",
-      "Campaigns included the Galaxy S23 launch teasers, Galaxy Buds2 Pro and the Galaxy Trade-In promotion.",
-    ],
-    link: { href: BEHANCE, label: "See selected videos on Behance ↗" },
-  },
-  {
     slug: "reporting-loop",
     title: "Reporting that writes itself",
     client: "UCAL", side: "Brand side", year: "2026",
@@ -206,8 +212,8 @@ const CASES = [
 // Display order: results first, then conceptual and spec work.
 const ORDER = [
   "movistar-creative-excellence", "ucal-differentiators", "ucal-business-school", "ucal-transfers",
-  "ucal-ai-production", "reporting-loop", "aws-vanishing-emails", "samsung-influencers",
-  "izipay-heladizimo", "spec-baldecash", "spec-bloqueo-ugc", "spec-casa-barrio",
+  "ucal-ai-production", "reporting-loop", "aws-vanishing-emails",
+  "izipay-heladizimo", "spec-liquidiv", "spec-baldecash", "spec-bloqueo-ugc", "spec-casa-barrio",
 ];
 CASES.sort((a, b) => ORDER.indexOf(a.slug) - ORDER.indexOf(b.slug));
 
@@ -257,6 +263,17 @@ const ES = {
       "Las horas dedicadas a la reportería de pauta bajaron 80%.",
     ],
     captions: ["El ciclo de reportería automatizado"],
+  },
+  "spec-liquidiv": {
+    title: "El agua sola ya no alcanza", side: "Trabajo especulativo · sin encargo", metricLabel: "ganchos para prueba A/B",
+    insight: "Nadie nota que está deshidratado hasta que el agua sola ya no alcanza: después de un vuelo largo, de una barra libre, de una clase de hot yoga.",
+    body: [
+      "Anuncio especulativo de respuesta directa para Liquid I.V. Sugar-Free, armado como prueba un equipo de performance: un solo cuerpo y un solo cierre, con tres ganchos, cada uno para un momento y un público distinto.",
+      "Gancho A, viajes: \"6 hour flight. 1 tiny cup of water.\" Gancho B, la mañana después de un matrimonio: \"the open bar was free. this isn't.\", sin prometer que cura la resaca. Gancho C, deporte: \"me thinking water is enough:\". Sin diálogos, con textos nativos: el problema se muestra, no se explica.",
+      "El cuerpo común es el ritual: el sobre se rasga, el polvo florece en el agua, la botella se agita, \"Same water. Better hydration.\" El cierre usa solo la afirmación que la marca ya hace, mejor hidratación que el agua sola, con el sobre Sugar-Free real y el botón \"Shop Sugar-Free\".",
+      "Los ganchos se generaron con Nano Banana Pro y las tomas de producto con GPT Image 2, con el sobre real como referencia para que la etiqueta salga exacta, y se animaron con Kling 3.0. El diseño sonoro se generó con ElevenLabs y la tipografía del cierre se armó a mano. No es un trabajo encargado ni publicado por Liquid I.V.",
+    ],
+    mp4Captions: ["Gancho A: el vuelo", "Gancho B: la mañana después", "Gancho C: hot yoga"],
   },
   "spec-baldecash": {
     side: "Trabajo especulativo · sin encargo", metric: "Spec",
@@ -322,16 +339,6 @@ const ES = {
       "Cannes Lions 2024, Bronce en Innovación.",
     ],
   },
-  "samsung-influencers": {
-    title: "Contenido con influencers para Samsung", client: "Samsung Perú", side: "Agencia · VML", metricLabel: "guiones para influencers",
-    insight: "Un guion funciona cuando los seguidores escuchan al creador, no a la marca.",
-    body: [
-      "Más de 50 guiones para campañas de Samsung con influencers peruanos líderes, con coordinación directa con cada creador desde la primera idea hasta la publicación.",
-      "Cada guion se adaptó a la voz del creador y a lo que funciona con sus seguidores, sin tocar el mensaje ni los atributos de producto de Samsung. La meta: contenido que el creador publique con orgullo, la marca apruebe y la audiencia vea de verdad.",
-      "Las campañas incluyeron los teasers de lanzamiento del Galaxy S23, los Galaxy Buds2 Pro y la promoción Galaxy Trade-In.",
-    ],
-    link: "Ver videos seleccionados en Behance ↗",
-  },
 };
 
 let LANG = "en";
@@ -343,7 +350,8 @@ function loc(c) {
   const es = LANG === "es" ? ES[c.slug] : null;
   if (!es) return c;
   const images = (c.images || []).map((im, i) => (Array.isArray(im) && es.captions?.[i] ? [im[0], es.captions[i]] : im));
-  return { ...c, ...es, images, link: c.link ? { ...c.link, label: es.link || c.link.label } : undefined };
+  const mp4s = c.mp4s && c.mp4s.map((m, i) => [m[0], es.mp4Captions?.[i] || m[1]]);
+  return { ...c, ...es, images, mp4s, link: c.link ? { ...c.link, label: es.link || c.link.label } : undefined };
 }
 
 const app = document.getElementById("app");
@@ -419,6 +427,7 @@ function caseView(slug) {
   const ordered = imgs.some((im) => im.caption);
   const gallery = imgs.length ? `<div class="gallery${ordered ? " gallery-grid" : ""}${c.portrait ? " gallery-portrait" : ""}${c.wide ? " gallery-wide" : ""}">${imgs.map(figure).join("")}</div>` : "";
   const video = c.video ? `<div class="embed"><iframe src="${c.video}" title="${esc(c.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`
+    : c.mp4s ? `<div class="video-row">${c.mp4s.map(([n, cap]) => `<figure><div class="embed-vertical"><video src="assets/${n}.mp4" poster="${A(n)}" controls playsinline preload="metadata"></video></div><figcaption>${esc(cap)}</figcaption></figure>`).join("")}</div>`
     : c.mp4 ? `<div class="embed-vertical"><video src="assets/${c.mp4}.mp4" poster="${A(c.mp4)}" controls playsinline preload="metadata"></video></div>` : "";
   const link = c.link ? `<a class="cta" href="${c.link.href}" target="_blank" rel="noopener">${esc(c.link.label)}</a>` : "";
 
