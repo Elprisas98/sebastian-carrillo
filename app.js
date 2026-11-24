@@ -61,12 +61,68 @@ const CASES = [
     images: ["ucal-ai-engineering", "ucal-ai-accounting", "ucal-ai-communication", "ucal-ai-graphic-design", "ucal-ai-interiors", "ucal-ai-cpa-communication", "ucal-ai-cpa-design", "ucal-ai-cpa-interiors", "ucal-ai-film", "ucal-ai-strategist", "ucal-ai-marketing", "ucal-ai-dgp"],
   },
   {
+    slug: "spec-farmersdog",
+    title: "Family eats real food",
+    client: "The Farmer's Dog", side: "Spec work · unsolicited", year: "2026",
+    metric: "3", metricLabel: "hooks to A/B test",
+    thumb: "spec-farmersdog-c", loop: "loop-farmersdog",
+    insight: "We treat our dogs like family in every way except the bowl: the $180 bed, the sweater, the birthday cake, and then the same brown pellets twice a day for years.",
+    brief: [
+      ["Audience", "US dog owners who already spend on their dog and still feed kibble. Solution-aware."],
+      ["Insight", "They spoil the dog everywhere except dinner."],
+      ["Bet", "A contradiction every owner recognizes, played for laughs, earns more attention than another ingredient list."],
+      ["Measure", "Hook rate by hook, then click-through to the quiz and cost per first box."],
+    ],
+    body: [
+      "Benchmark first. The Farmer's Dog's brand films sell food as love, and its TikTok work leans on creators and convenience. Its ads rarely use humor, so humor became the angle: the contradiction between how much owners spend on their dog and what goes in the bowl.",
+      "Three hooks, three moments, one dog. The spoiled dog: \"his bed: $180 / his sweater: $45 / his dinner:\", landing as kibble hits the bowl. The dinner stare: \"he's not begging. he's asking why his food looks like that.\" The picky eater: \"me: it's dinner / him:\", as he walks away from a full bowl.",
+      "One shared body: a bowl of fresh food, a dog that dives in and licks it clean. The copy uses only what the brand claims (real meat and veggies, made fresh, portioned for your dog, human-grade, developed by board-certified vet nutritionists) and closes on \"Family eats real food.\" No packaging is shown, so nothing on screen invents a label.",
+      "One dog, one apartment: every still came from the same reference image in Nano Banana Pro so the dog never changes, then was animated with Kling 3.0. Sound design and music were generated with ElevenLabs and CassetteAI, and the captions and close were set by hand in Remotion. Not commissioned or published by The Farmer's Dog.",
+    ],
+    mp4s: [
+      ["spec-farmersdog-a", "Hook A: the spoiled dog"],
+      ["spec-farmersdog-b", "Hook B: the dinner stare"],
+      ["spec-farmersdog-c", "Hook C: the picky eater"],
+    ],
+  },
+  {
+    slug: "spec-starface",
+    title: "Your fingers aren't skincare",
+    client: "Starface", side: "Spec work · unsolicited", year: "2026",
+    metric: "3", metricLabel: "hooks to A/B test",
+    thumb: "spec-starface-a", loop: "loop-starface",
+    insight: "Everyone knows not to pick. Everyone picks anyway: in the mirror at 1 a.m., under a fourth layer of concealer, with a hand that keeps drifting back to the jaw in class.",
+    brief: [
+      ["Audience", "Gen Z in the US with occasional breakouts. Problem-aware: they know patches exist."],
+      ["Insight", "The pimple isn't what makes it worse. Their hands are."],
+      ["Bet", "Starface's least-used claim, that the star protects the spot from picking, beats another \"cute patch\" ad."],
+      ["Measure", "Hook rate by hook, then CTR and cost per purchase on the winner."],
+    ],
+    body: [
+      "Benchmark first. Starface's paid social leans on creators wearing stars as an accessory, limited drops and acne positivity. The claim it uses least is the most functional one: the star shields the spot and reminds you not to pick. That became the angle.",
+      "Three hooks, three behaviors, three audiences, all with native captions. The picker at 1 a.m.: \"me at 1am about to make it so much worse:\". The concealer layerer in the car mirror: \"layer 4 of concealer and it's still the main character\". The student who can't stop touching his jaw: \"my hand every 4 seconds in lecture:\".",
+      "One shared body: a star comes off the sheet and goes on the spot, with the brand's own three words, \"absorbs. shrinks. protects.\" The close lands the line, \"your fingers aren't skincare.\", and uses only claims Starface makes, footnote included: 100% hydrocolloid, clinically proven to shrink pimples in 6 hours.",
+      "Stills generated with Nano Banana Pro and the compact with GPT Image, using Starface's product photos as reference, then animated with Kling 3.0. Sound design and music were generated with ElevenLabs and CassetteAI, and the captions and close were set by hand in Remotion. Every frame was reviewed before animating, and the one shot where the star missed the spot was redone. Not commissioned or published by Starface.",
+    ],
+    mp4s: [
+      ["spec-starface-a", "Hook A: the 1 a.m. picker"],
+      ["spec-starface-b", "Hook B: the concealer"],
+      ["spec-starface-c", "Hook C: the lecture"],
+    ],
+  },
+  {
     slug: "spec-liquidiv",
     title: "Water alone isn't keeping up",
     client: "Liquid I.V.", side: "Spec work · unsolicited", year: "2026",
     metric: "3", metricLabel: "hooks to A/B test",
-    thumb: "spec-liquidiv-a",
+    thumb: "spec-liquidiv-a", loop: "loop-liquidiv",
     insight: "Nobody notices they're dehydrated until water alone stops keeping up: after a long flight, an open bar, a hot class.",
+    brief: [
+      ["Audience", "US adults who drink water and don't think they need more. Problem-unaware."],
+      ["Insight", "You only notice dehydration once water alone stops keeping up."],
+      ["Bet", "Three specific moments (a flight, the morning after, a hot class) beat a generic hydration claim."],
+      ["Measure", "Hook rate by hook, then CTR and cost per purchase on the winner."],
+    ],
     body: [
       "Spec direct-response ad for Liquid I.V. Sugar-Free, built the way a performance team tests: one body and one close, three hooks, each aimed at a different moment and audience.",
       "Hook A, travel: \"6 hour flight. 1 tiny cup of water.\" Hook B, the morning after a wedding: \"the open bar was free. this isn't.\", without promising a hangover cure. Hook C, fitness: \"me thinking water is enough:\". No dialogue, native captions, the problem shown, not explained.",
@@ -85,8 +141,14 @@ const CASES = [
     title: "Tu talento no necesita historial",
     client: "BaldeCash", side: "Spec work · unsolicited", year: "2026",
     metric: "5", metricLabel: "pieces: Reel, carousel, static",
-    thumb: "spec-baldecash-ugc",
+    thumb: "spec-baldecash-ugc", loop: "loop-baldecash",
     insight: "\"I have the talent. What I don't have is a credit history.\" Banks judge students on something they have not had the chance to build yet.",
+    brief: [
+      ["Audience", "Peruvian university students with no credit history who think financing is out of reach."],
+      ["Insight", "Banks judge students on something they haven't had the chance to build."],
+      ["Bet", "The one argument only BaldeCash can make (no credit history, no guarantor) beats product-and-price catalog ads."],
+      ["Measure", "CTR and cost per application against the current catalog ads."],
+    ],
     body: [
       "Spec proposal for BaldeCash, the Peruvian fintech that finances laptops for students with no credit history and no guarantor. Its paid social leads with product and price; the opportunity was to bring the one argument only BaldeCash can make into the ads.",
       "The hook is a native meme caption: \"my laptop when my only job is changing the slides:\". Mid-presentation, Diego's old laptop gives out on its own: the screen stutters, a band of interference rolls across it and it goes black, while the hallway light stays on. No dialogue, show don't tell: his frozen face, then his phone lighting up on the desk as the group chat blows up.",
@@ -103,44 +165,10 @@ const CASES = [
     ],
   },
   {
-    slug: "spec-bloqueo-ugc",
-    title: "Lima's grey sky lies",
-    client: "Bloqueo (fictional sunscreen)", side: "Spec work · AI social", year: "2026",
-    metric: "3", metricLabel: "pieces: 2 statics + UGC",
-    thumb: "spec-bloqueo-product",
-    insight: "In Lima, sunscreen feels like a summer thing. The grey sky still burns.",
-    body: [
-      "Spec campaign for a fictional sunscreen brand built on one local truth: for most of the year Lima is overcast, so people skip SPF, but UV goes through the clouds.",
-      "Two paid social statics carry the line in brand voice: \"El cielo está gris. El sol, no.\" and \"En Lima, el gris también quema.\" A UGC video tells the same truth as a confession, in the creator's voice, with the product shown in use, never presented.",
-      "Photography generated with Nano Banana Pro without any text, using the product shot as a reference so the stick stays identical across pieces. Typography and layout were set by hand on a grid with real typefaces (Archivo and Instrument Serif). The UGC video was animated with Veo 3.1, including Spanish dialogue.",
-    ],
-    mp4: "spec-bloqueo-ugc",
-    images: [
-      ["spec-bloqueo-product", "Paid social: product"],
-      ["spec-bloqueo-face", "Paid social: lifestyle"],
-    ],
-  },
-  {
-    slug: "spec-casa-barrio",
-    title: "45 m², no excuses",
-    client: "Casa Barrio (fictional home store)", side: "Spec work · AI UGC", year: "2026",
-    metric: "17 s", metricLabel: "before-and-after UGC",
-    thumb: "spec-casabarrio-ugc",
-    insight: "Everyone in Lima complains their apartment is small. Usually the apartment is fine. The furniture is too big.",
-    body: [
-      "Spec campaign for a fictional home store that sells compact, foldable furniture. The line flips the most common complaint about Lima apartments: \"Tu depa no es chico. Tus muebles son grandes.\"",
-      "The UGC video is a 17-second before and after from a renter's phone. First, he has to climb over his own sofa to cross a 45 m² living room. One month later, in the same room with a sofa bed, a fold-down desk and a mirror, there is floor to spare: \"Resulta que mis muebles eran grandes.\" The brand line closes it on the end card.",
-      "The Stories ad carries the same line as a static piece.",
-      "Both frames were generated with Nano Banana Pro, using the first one as a reference so the person and the room stay the same, then animated with Veo 3.1, including Spanish dialogue. Captions and typography were set by hand with Hanken Grotesk and Newsreader.",
-    ],
-    mp4: "spec-casabarrio-ugc",
-    images: [["spec-casabarrio-story", "Stories ad"]],
-  },
-  {
     slug: "izipay-heladizimo",
     title: "Verano Heladizimo",
     client: "izipay", side: "Conceptual work · VML", year: "2024",
-    metric: "Concept", metricLabel: "conceptual work",
+    metric: "Pitch", metricLabel: "concept recreated with AI",
     thumb: "izipay-heladizimo-fans",
     insight: "In a Lima heatwave, people walk into whichever business has air conditioning. The coolest shop on the block gets the customers.",
     body: [
@@ -204,7 +232,7 @@ const CASES = [
       "The time that used to go into putting the numbers together now goes into deciding what to test next.",
       "The hours spent on paid media reporting fell by 80%.",
     ],
-    wide: true,
+    wide: true, tile: true,
     images: [["loop-reporting", "The automated reporting loop"]],
   },
 ];
@@ -213,7 +241,7 @@ const CASES = [
 const ORDER = [
   "movistar-creative-excellence", "ucal-differentiators", "ucal-business-school", "ucal-transfers",
   "ucal-ai-production", "reporting-loop", "aws-vanishing-emails",
-  "izipay-heladizimo", "spec-liquidiv", "spec-baldecash", "spec-bloqueo-ugc", "spec-casa-barrio",
+  "izipay-heladizimo", "spec-farmersdog", "spec-starface", "spec-liquidiv", "spec-baldecash",
 ];
 CASES.sort((a, b) => ORDER.indexOf(a.slug) - ORDER.indexOf(b.slug));
 
@@ -264,9 +292,49 @@ const ES = {
     ],
     captions: ["El ciclo de reportería automatizado"],
   },
+  "spec-farmersdog": {
+    title: "La familia come comida de verdad", side: "Trabajo especulativo · sin encargo", metricLabel: "ganchos para prueba A/B",
+    insight: "Tratamos al perro como familia en todo menos en el plato: la cama de US$180, el suéter, la torta de cumpleaños y, después, las mismas bolitas marrones dos veces al día durante años.",
+    brief: [
+      ["Público", "Dueños de perros en EE. UU. que ya gastan en su perro y siguen dándole croquetas. Conocen la solución."],
+      ["Insight", "Engríen al perro en todo, menos en la comida."],
+      ["Apuesta", "Una contradicción que todo dueño reconoce, contada con humor, gana más atención que otra lista de ingredientes."],
+      ["Qué medir", "Tasa de gancho por cada uno, luego clics al quiz y costo por primera caja."],
+    ],
+    body: [
+      "Primero, el benchmark. Los films de marca de The Farmer's Dog venden la comida como amor, y su trabajo en TikTok se apoya en creadores y en la conveniencia. Sus anuncios casi no usan el humor, así que el humor se volvió el ángulo: la contradicción entre lo que el dueño gasta en su perro y lo que pone en el plato.",
+      "Tres ganchos, tres momentos, un solo perro. El perro engreído: \"his bed: $180 / his sweater: $45 / his dinner:\", justo cuando las croquetas caen al plato. La mirada en la cena: \"he's not begging. he's asking why his food looks like that.\" El mañoso: \"me: it's dinner / him:\", mientras deja el plato lleno y se va.",
+      "Un solo cuerpo en común: un plato de comida fresca y un perro que se lanza y lo deja limpio. El copy usa solo lo que la marca afirma (carne y verduras de verdad, hecho fresco, porcionado para tu perro, calidad apta para humanos, desarrollado por nutricionistas veterinarios certificados) y cierra con \"Family eats real food.\" No se muestra el empaque, para que nada en pantalla invente una etiqueta.",
+      "Un perro, un departamento: todos los cuadros salieron de la misma imagen de referencia en Nano Banana Pro para que el perro nunca cambie, y se animaron con Kling 3.0. El diseño sonoro y la música se generaron con ElevenLabs y CassetteAI, y los textos y el cierre se armaron a mano en Remotion. No es un trabajo encargado ni publicado por The Farmer's Dog.",
+    ],
+    mp4Captions: ["Gancho A: el perro engreído", "Gancho B: la mirada en la cena", "Gancho C: el mañoso"],
+  },
+  "spec-starface": {
+    title: "Tus dedos no son skincare", side: "Trabajo especulativo · sin encargo", metricLabel: "ganchos para prueba A/B",
+    insight: "Todos saben que no hay que reventarse los granos. Todos lo hacen igual: frente al espejo a la 1 a. m., bajo la cuarta capa de corrector, con una mano que vuelve a la mandíbula en plena clase.",
+    brief: [
+      ["Público", "Gen Z en EE. UU. con brotes ocasionales. Conocen el problema y saben que existen los parches."],
+      ["Insight", "No es el grano lo que lo empeora. Son sus manos."],
+      ["Apuesta", "La afirmación que Starface menos usa, que la estrella protege el grano de las manos, le gana a otro anuncio de \"parche bonito\"."],
+      ["Qué medir", "Tasa de gancho por cada uno, luego CTR y costo por compra del ganador."],
+    ],
+    body: [
+      "Primero, el benchmark. La pauta de Starface se apoya en creadoras que usan las estrellas como accesorio, en lanzamientos limitados y en la positividad frente al acné. La afirmación que menos usa es la más funcional: la estrella protege el grano y te recuerda no tocarlo. Ese fue el ángulo.",
+      "Tres ganchos, tres conductas, tres públicos, todos con textos nativos. La que se revienta el grano a la 1 a. m.: \"me at 1am about to make it so much worse:\". La que tapa el grano con corrector en el espejo del auto: \"layer 4 of concealer and it's still the main character\". El estudiante que no deja de tocarse la mandíbula: \"my hand every 4 seconds in lecture:\".",
+      "Un solo cuerpo en común: la estrella sale de la lámina y va sobre el grano, con las tres palabras de la propia marca, \"absorbs. shrinks. protects.\" El cierre aterriza la frase, \"your fingers aren't skincare.\", y usa solo afirmaciones de Starface, con su nota al pie: 100% hidrocoloide, clínicamente probado para reducir granos en 6 horas.",
+      "Los cuadros se generaron con Nano Banana Pro y el estuche con GPT Image, con las fotos de producto de Starface como referencia, y se animaron con Kling 3.0. El diseño sonoro y la música se generaron con ElevenLabs y CassetteAI, y los textos y el cierre se armaron a mano en Remotion. Cada cuadro se revisó antes de animarlo, y se rehízo la única toma en que la estrella no tapaba el grano. No es un trabajo encargado ni publicado por Starface.",
+    ],
+    mp4Captions: ["Gancho A: la 1 a. m.", "Gancho B: el corrector", "Gancho C: la clase"],
+  },
   "spec-liquidiv": {
     title: "El agua sola ya no alcanza", side: "Trabajo especulativo · sin encargo", metricLabel: "ganchos para prueba A/B",
     insight: "Nadie nota que está deshidratado hasta que el agua sola ya no alcanza: después de un vuelo largo, de una barra libre, de una clase de hot yoga.",
+    brief: [
+      ["Público", "Adultos en EE. UU. que toman agua y no creen necesitar más. No saben que tienen el problema."],
+      ["Insight", "Solo notas la deshidratación cuando el agua sola ya no alcanza."],
+      ["Apuesta", "Tres momentos concretos (un vuelo, la mañana después, una clase de hot yoga) le ganan a una promesa genérica de hidratación."],
+      ["Qué medir", "Tasa de gancho por cada uno, luego CTR y costo por compra del ganador."],
+    ],
     body: [
       "Anuncio especulativo de respuesta directa para Liquid I.V. Sugar-Free, armado como prueba un equipo de performance: un solo cuerpo y un solo cierre, con tres ganchos, cada uno para un momento y un público distinto.",
       "Gancho A, viajes: \"6 hour flight. 1 tiny cup of water.\" Gancho B, la mañana después de un matrimonio: \"the open bar was free. this isn't.\", sin prometer que cura la resaca. Gancho C, deporte: \"me thinking water is enough:\". Sin diálogos, con textos nativos: el problema se muestra, no se explica.",
@@ -278,6 +346,12 @@ const ES = {
   "spec-baldecash": {
     side: "Trabajo especulativo · sin encargo", metric: "5", metricLabel: "piezas: Reel, carrusel y estático",
     insight: "\"Tengo el talento. Lo que no tengo es historial.\" El banco mide al estudiante por algo que todavía no tuvo oportunidad de construir.",
+    brief: [
+      ["Público", "Universitarios peruanos sin historial crediticio que creen que el financiamiento no es para ellos."],
+      ["Insight", "El banco mide al estudiante por algo que todavía no pudo construir."],
+      ["Apuesta", "El único argumento que solo BaldeCash puede usar (sin historial, sin garante) le gana a los anuncios de catálogo con producto y precio."],
+      ["Qué medir", "CTR y costo por solicitud frente a los anuncios de catálogo actuales."],
+    ],
     body: [
       "Propuesta especulativa para BaldeCash, la fintech peruana que financia laptops a estudiantes sin historial crediticio ni garante. Su pauta habla de producto y precio; la oportunidad era llevar a los anuncios el argumento que solo ellos pueden usar.",
       "El gancho es un texto nativo de meme: \"mi laptop cuando mi único trabajo es pasar las diapositivas:\". En plena exposición, la laptop vieja de Diego se malogra sola: la pantalla tartamudea, la cruza una banda de interferencia y se va a negro, mientras la luz del pasadizo sigue prendida. Sin diálogos, mostrar y no contar: su cara congelada y luego su celular que se ilumina sobre la mesa mientras el grupo lo bombardea.",
@@ -286,31 +360,8 @@ const ES = {
     ],
     captions: ["Carrusel 1/3: el meme", "Carrusel 2/3: la frase", "Carrusel 3/3: la oferta", "Estático: desde el cel vs. pantalla completa"],
   },
-  "spec-bloqueo-ugc": {
-    metricLabel: "piezas: 2 estáticos + UGC",
-    title: "El cielo gris de Lima miente", client: "Bloqueo (protector solar ficticio)", side: "Trabajo especulativo · social con IA",
-    insight: "En Lima, el bloqueador parece cosa de verano. El cielo gris quema igual.",
-    body: [
-      "Campaña especulativa para una marca ficticia de protector solar, construida sobre una verdad local: Lima pasa la mayor parte del año nublada, la gente no usa bloqueador, pero la radiación UV atraviesa las nubes.",
-      "Dos estáticos de pauta llevan la frase en voz de marca: \"El cielo está gris. El sol, no.\" y \"En Lima, el gris también quema.\" Un video UGC cuenta la misma verdad como una confesión, en la voz de la creadora, con el producto en uso y nunca presentado.",
-      "La fotografía se generó con Nano Banana Pro sin texto, con la foto del producto como referencia para que la barra sea idéntica en todas las piezas. La tipografía y la diagramación se hicieron a mano sobre una retícula, con Archivo e Instrument Serif. El video UGC se animó con Veo 3.1, con diálogo en español.",
-    ],
-    captions: ["Pauta: producto", "Pauta: lifestyle"],
-  },
-  "spec-casa-barrio": {
-    metricLabel: "UGC de antes y después",
-    title: "45 m², sin excusas", client: "Casa Barrio (tienda de hogar ficticia)", side: "Trabajo especulativo · UGC con IA",
-    insight: "En Lima todos se quejan de que su depa es chico. Casi siempre el depa está bien. Los muebles son demasiado grandes.",
-    body: [
-      "Campaña especulativa para una tienda ficticia de muebles compactos y plegables. La frase le da la vuelta a la queja más común sobre los departamentos de Lima: \"Tu depa no es chico. Tus muebles son grandes.\"",
-      "El video UGC es un antes y después de 17 segundos grabado desde el celular de un inquilino. Primero tiene que trepar su propio sofá para cruzar una sala de 45 m². Un mes después, en el mismo cuarto con sofá cama, escritorio abatible y espejo, sobra piso: \"Resulta que mis muebles eran grandes.\" La frase de marca cierra en la tarjeta final.",
-      "La pieza para Stories lleva la misma frase en formato estático.",
-      "Los dos cuadros se generaron con Nano Banana Pro, con el primero como referencia para mantener a la persona y el cuarto, y se animaron con Veo 3.1, con diálogo en español. Los subtítulos y la tipografía se armaron a mano con Hanken Grotesk y Newsreader.",
-    ],
-    captions: ["Pieza para Stories"],
-  },
   "izipay-heladizimo": {
-    side: "Trabajo conceptual · VML", metric: "Concepto", metricLabel: "trabajo conceptual",
+    side: "Trabajo conceptual · VML", metric: "Pitch", metricLabel: "concepto recreado con IA",
     insight: "En una ola de calor en Lima, la gente entra al negocio que tenga aire acondicionado. El local más fresco de la cuadra se queda con los clientes.",
     body: [
       "En febrero, Lima pasó los 30 °C y la gente empezó a buscar lugares con aire acondicionado para escapar del calor, casi siempre pequeños negocios que atraían clientes sin proponérselo.",
@@ -359,51 +410,79 @@ function loc(c) {
 const app = document.getElementById("app");
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const thumbSrc = (c) => c.thumbUrl || A(c.thumb);
-const thumbHtml = (c) => c.tile ? `<span class="thumb tile">${esc(c.tile)}</span>` : `<img class="thumb" src="${thumbSrc(c)}" alt="" loading="lazy">`;
+const cardMedia = (c) => c.tile
+  ? `<span class="card-tile"><b>${esc(c.metric)}</b><small>${esc(c.metricLabel)}</small></span>`
+  : `<img src="${thumbSrc(c)}" alt="" loading="lazy">`;
+
+// Muted loop of a spec ad; played only while on screen (see the observer below)
+const loopVideo = (c, eager) =>
+  `<video class="loop" src="assets/${c.loop}.mp4" poster="${A(c.thumb)}" muted loop playsinline preload="${eager ? "auto" : "none"}" aria-hidden="true"></video>`;
 
 function workView() {
-  const row = (c, i) => `
-    <li class="case-row">
-      <a href="#/work/${c.slug}">
-        <span class="num">${String(i + 1).padStart(2, "0")}</span>
-        <span class="title">${esc(c.title)}</span>
-        <span class="meta">${esc(c.client)} · ${esc(c.side)} · ${c.year}</span>
-        <span class="metric">${esc(c.metric)}<small>${esc(c.metricLabel)}</small></span>
-        ${thumbHtml(c)}
-      </a>
-    </li>`;
   const all = CASES.map(loc);
   const isSpec = (c) => c.slug.startsWith("spec-");
   const real = all.filter((c) => !isSpec(c));
   const spec = all.filter(isSpec);
-  const rows = real.map((c, i) => row(c, i)).join("");
-  const specRows = spec.map((c, i) => row(c, real.length + i)).join("");
+  const reel = ["spec-farmersdog", "spec-starface", "spec-liquidiv"].map((s) => all.find((c) => c.slug === s));
+
+  const card = (c) => `
+    <li class="card">
+      <a href="#/work/${c.slug}">
+        <div class="card-media">${cardMedia(c)}</div>
+        <div class="card-text">
+          <p class="card-metric">${esc(c.metric)}<small>${esc(c.metricLabel)}</small></p>
+          <h3>${esc(c.title)}</h3>
+          <p class="card-meta">${esc(c.client)} · ${esc(c.side)} · ${c.year}</p>
+        </div>
+      </a>
+    </li>`;
+  const specCard = (c) => `
+    <li class="card card-spec">
+      <a href="#/work/${c.slug}">
+        <div class="card-media">${loopVideo(c, false)}</div>
+        <div class="card-text">
+          <h3>${esc(c.title)}</h3>
+          <p class="card-meta">${esc(c.client)} · ${esc(c.metric)} ${esc(c.metricLabel)}</p>
+        </div>
+      </a>
+    </li>`;
 
   return `
     <section class="view">
-      <div class="hero">
-        <p class="eyebrow">${T("Performance Creative Strategist · Meta, TikTok &amp; Google", "Performance Creative Strategist · Meta, TikTok y Google")}</p>
-        <h1 class="display">${T("Ads that say <em>one thing</em>. And sell it.", "Anuncios que dicen <em>una sola cosa</em>. Y la venden.")}</h1>
-        <div class="hero-grid">
-          <p>${T(
+      <div class="hero hero-split">
+        <div class="hero-copy">
+          <p class="eyebrow">${T("Performance Creative Strategist · Meta, TikTok &amp; Google", "Performance Creative Strategist · Meta, TikTok y Google")}</p>
+          <h1 class="display">${T("Ads that say <em>one thing</em>. And sell it.", "Anuncios que dicen <em>una sola cosa</em>. Y la venden.")}</h1>
+          <p class="hero-lead">${T(
             "I make ads clearer: one idea that matters to someone who has never heard of the brand, said plainly, then the results decide the next round. Agency side at VML for Movistar and izipay. Brand side at UCAL, leading the campaigns and the agencies.",
             "Hago anuncios más claros: una idea que le importe a alguien que nunca oyó de la marca, dicha simple, y que los resultados decidan la siguiente ronda. En agencia, en VML, para Movistar e izipay. En marca, en UCAL, a cargo de las campañas y las agencias.")}</p>
-          <div class="stats">
-            <div class="stat"><b>+45%</b><span>CTR, Movistar</span></div>
-            <div class="stat"><b>−40%</b><span>${T("Cost per lead, izipay", "Costo por lead, izipay")}</span></div>
-            <div class="stat"><b>−28%</b><span>${T("Cost per lead, UCAL", "Costo por lead, UCAL")}</span></div>
+          <div class="actions">
+            <a class="btn btn-primary" href="#cases" data-scroll="cases">${T("See the work ↓", "Ver el trabajo ↓")}</a>
+            <a class="btn btn-ghost" href="assets/cv-sebastian-carrillo-brake.pdf" target="_blank" rel="noopener">${T("Download CV", "Descargar CV")}</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/sebastian-carrillo-brake-a62b37145" target="_blank" rel="noopener">LinkedIn ↗</a>
           </div>
         </div>
-        <div class="actions">
-          <a class="btn btn-primary" href="#cases" data-scroll="cases">${T("See the work ↓", "Ver el trabajo ↓")}</a>
-          <a class="btn btn-ghost" href="assets/cv-sebastian-carrillo-brake.pdf" target="_blank" rel="noopener">${T("Download CV", "Descargar CV")}</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/sebastian-carrillo-brake-a62b37145" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <div class="reel" aria-label="${T("Spec ads", "Anuncios especulativos")}">
+          ${reel.map((c) => `<a class="phone" href="#/work/${c.slug}">${loopVideo(c, true)}<span>${esc(c.client)}</span></a>`).join("")}
         </div>
-        <div class="brands"><span>${T("Brands", "Marcas")}</span><ul>${["Movistar", "izipay", "Santander", "AWS &amp; Slalom", "Cementos Pacasmayo", "Cementos Sol", "Viru", "Kulhaus", "Sublime", "UCAL"].map((b) => `<li>${b}</li>`).join("")}</ul></div>
-        <div class="brands"><span>${T("Industries", "Industrias")}</span><p class="industries">${T("Telecom · Payments · Banking · Cloud · Construction · Agro-export · Retail · Consumer goods · Education", "Telecomunicaciones · Pagos · Banca · Nube · Construcción · Agroexportación · Retail · Consumo masivo · Educación")}</p></div>
       </div>
+      <div class="stats">
+        <div class="stat"><b>+45%</b><span>CTR, Movistar</span></div>
+        <div class="stat"><b>−40%</b><span>${T("Cost per lead, izipay", "Costo por lead, izipay")}</span></div>
+        <div class="stat"><b>−28%</b><span>${T("Cost per lead, UCAL", "Costo por lead, UCAL")}</span></div>
+        <div class="stat"><b>${T("Bronze", "Bronce")}</b><span>${T("Cannes Lions, Innovation", "Cannes Lions, Innovación")}</span></div>
+      </div>
+      <div class="brands"><span>${T("Brands", "Marcas")}</span><ul>${["Movistar", "izipay", "Santander", "AWS &amp; Slalom", "Cementos Pacasmayo", "Cementos Sol", "Viru", "Kulhaus", "Sublime", "UCAL"].map((b) => `<li>${b}</li>`).join("")}</ul></div>
+      <div class="brands"><span>${T("Industries", "Industrias")}</span><p class="industries">${T("Telecom · Payments · Banking · Cloud · Construction · Agro-export · Retail · Consumer goods · Education", "Telecomunicaciones · Pagos · Banca · Nube · Construcción · Agroexportación · Retail · Consumo masivo · Educación")}</p></div>
+
+      <div class="section-head" id="cases"><h2>${T("Selected work", "Trabajo seleccionado")}</h2><span>${real.length} ${T("cases with results", "casos con resultados")}</span></div>
+      <ul class="cards">${real.map(card).join("")}</ul>
+
+      <div class="section-head"><h2>${T("Spec ads, made with AI", "Anuncios especulativos con IA")}</h2><span>${T("Unsolicited · benchmark, brief and hooks to A/B test", "Sin encargo · benchmark, brief y ganchos para prueba A/B")}</span></div>
+      <ul class="cards cards-spec">${spec.map(specCard).join("")}</ul>
+
       <section class="process" aria-label="${T("How the work gets done", "Cómo se hace el trabajo")}">
-        <div class="section-head"><h2>${T("The loop", "El ciclo")}</h2><span>${T("How every case below was built", "Cómo se construyó cada caso")}</span></div>
+        <div class="section-head"><h2>${T("How I work", "Cómo trabajo")}</h2><span>${T("The loop behind every case", "El ciclo detrás de cada caso")}</span></div>
         <ol class="steps">
           <li><b>${T("Read the data", "Leer los datos")}</b><p>${T(
             "CTR, CPC, cost per lead and sales across Meta, TikTok and Google. KPI reporting automated with Claude, so decisions never wait for a monthly report.",
@@ -415,14 +494,10 @@ function workView() {
             "Briefs built on insights designers can act on, and prompt templates by product that ship up to 10 variations a day.",
             "Briefs con insights que el equipo de diseño puede ejecutar, y plantillas de prompts por producto que entregan hasta 10 variaciones al día.")}</p></li>
           <li><b>${T("Test and iterate", "Probar e iterar")}</b><p>${T(
-            "Keep the winners, change one variable at a time (copy, type, color, layout) and start the next round.",
-            "Se quedan los ganadores, se cambia una variable a la vez (copy, tipografía, color, layout) y empieza la siguiente ronda.")}</p></li>
+            "Keep the winners, change one variable at a time (hook, copy, type, layout) and start the next round.",
+            "Se quedan los ganadores, se cambia una variable a la vez (gancho, copy, tipografía, layout) y empieza la siguiente ronda.")}</p></li>
         </ol>
       </section>
-      <div class="section-head" id="cases"><h2 class="display">${T("Selected work", "Trabajo seleccionado")}</h2><span>${real.length} ${T("cases with results", "casos con resultados")}</span></div>
-      <ul class="case-list">${rows}</ul>
-      <div class="section-head spec-head"><h2 class="display">${T("AI spec work", "Trabajo especulativo con IA")}</h2><span>${T("Unsolicited ads, made end to end with AI", "Anuncios sin encargo, hechos de principio a fin con IA")}</span></div>
-      <ul class="case-list">${specRows}</ul>
     </section>`;
 }
 
@@ -431,6 +506,7 @@ function caseView(slug) {
   if (i < 0) return workView();
   const c = loc(CASES[i]);
   const next = loc(CASES[(i + 1) % CASES.length]);
+  const spec = c.slug.startsWith("spec-");
   const imgs = [
     ...(c.images || []).map((im) => (Array.isArray(im) ? { src: A(im[0]), caption: im[1] } : { src: A(im) })),
     ...(c.imageUrls || []).map((src) => ({ src })),
@@ -439,9 +515,17 @@ function caseView(slug) {
   const ordered = imgs.some((im) => im.caption);
   const gallery = imgs.length ? `<div class="gallery${ordered ? " gallery-grid" : ""}${c.portrait ? " gallery-portrait" : ""}${c.wide ? " gallery-wide" : ""}">${imgs.map(figure).join("")}</div>` : "";
   const video = c.video ? `<div class="embed"><iframe src="${c.video}" title="${esc(c.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`
-    : c.mp4s ? `<div class="video-row">${c.mp4s.map(([n, cap]) => `<figure><div class="embed-vertical"><video src="assets/${n}.mp4" poster="${A(n)}" controls playsinline preload="metadata"></video></div><figcaption>${esc(cap)}</figcaption></figure>`).join("")}</div>`
-    : c.mp4 ? `<div class="embed-vertical"><video src="assets/${c.mp4}.mp4" poster="${A(c.mp4)}" controls playsinline preload="metadata"></video></div>` : "";
+    : c.mp4s ? `<div class="video-row">${c.mp4s.map(([n, cap]) => `<figure><div class="embed-vertical"><video src="assets/${n}.mp4" poster="${A(n)}" controls playsinline preload="none"></video></div><figcaption>${esc(cap)}</figcaption></figure>`).join("")}</div>`
+    : c.mp4 ? `<div class="embed-vertical"><video src="assets/${c.mp4}.mp4" poster="${A(c.mp4)}" controls playsinline preload="none"></video></div>` : "";
   const link = c.link ? `<a class="cta" href="${c.link.href}" target="_blank" rel="noopener">${esc(c.link.label)}</a>` : "";
+  const brief = c.brief ? `
+      <section class="brief" aria-label="${T("The brief", "El brief")}">
+        <h3>${T("The brief", "El brief")}</h3>
+        <dl>${c.brief.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
+      </section>` : "";
+  // Spec cases keep their production notes apart from the strategy
+  const body = spec ? c.body.slice(0, -1) : c.body;
+  const made = spec ? `<p class="made"><b>${T("How it was made", "Cómo se hizo")}</b>${esc(c.body[c.body.length - 1])}</p>` : "";
 
   return `
     <article class="view">
@@ -455,11 +539,12 @@ function caseView(slug) {
           <div class="big"><dt>${esc(c.metricLabel)}</dt><dd>${esc(c.metric)}</dd></div>
         </dl>
       </header>
-      <div class="case-body">
+      ${video}${brief}
+      <div class="case-body${spec ? " is-spec" : ""}">
         <div class="insight-card"><h3>${T("The idea", "La idea")}</h3><p class="insight">${esc(c.insight)}</p></div>
-        <div><h3>${T("What was done", "Qué se hizo")}</h3>${c.body.map((p) => `<p>${esc(p)}</p>`).join("")}</div>
+        <div><h3>${T("What was done", "Qué se hizo")}</h3>${body.map((p) => `<p>${esc(p)}</p>`).join("")}${made}</div>
       </div>
-      ${video}${link}${gallery}
+      ${link}${gallery}
       <a class="next-case" href="#/work/${next.slug}"><span>${T("Next case", "Siguiente caso")}</span><b>${esc(next.title)} →</b></a>
     </article>`;
 }
@@ -532,7 +617,7 @@ function aboutView() {
           <p class="skill-label">${T("Strategy &amp; performance", "Estrategia y performance")}</p>
           <ul class="chips"><li>${T("Creative briefs", "Briefs creativos")}</li><li>${T("Angle &amp; hook research", "Investigación de ángulos y ganchos")}</li><li>Meta Ad Library</li><li>${T("A/B testing", "Pruebas A/B")}</li><li>Meta Ads Manager</li><li>TikTok Ads Manager</li><li>Google Ads</li><li>Social listening</li></ul>
           <p class="skill-label">${T("AI &amp; production", "IA y producción")}</p>
-          <ul class="chips"><li>ChatGPT</li><li>Claude</li><li>Gemini</li><li>Perplexity</li><li>Midjourney</li><li>Nano Banana</li><li>Higgsfield</li><li>Google Flow</li><li>Veo 3</li><li>Canva</li><li>CapCut</li><li>Premiere Pro</li><li>Lovable</li><li>Apps Script</li></ul>
+          <ul class="chips"><li>ChatGPT</li><li>Claude</li><li>Gemini</li><li>Perplexity</li><li>Midjourney</li><li>Nano Banana</li><li>Higgsfield</li><li>Google Flow</li><li>Veo 3</li><li>Kling</li><li>ElevenLabs</li><li>Canva</li><li>CapCut</li><li>Premiere Pro</li><li>Remotion</li><li>Lovable</li><li>Apps Script</li></ul>
           <p class="skill-label">${T("Languages", "Idiomas")}</p>
           <ul class="chips"><li>${T("English (C1, Cambridge CAE)", "Inglés (C1, Cambridge CAE)")}</li><li>${T("Spanish (native)", "Español (nativo)")}</li></ul>
         </div>
@@ -568,12 +653,24 @@ function chrome() {
   document.querySelector(".lightbox-close").textContent = T("Close", "Cerrar");
 }
 
+// Spec loops play only while on screen, and never for people who prefer reduced motion
+const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const io = "IntersectionObserver" in window
+  ? new IntersectionObserver((entries) => entries.forEach((e) => (e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause())), { threshold: 0.35 })
+  : null;
+function watchLoops() {
+  if (calm || !io) return;
+  io.disconnect();
+  document.querySelectorAll("video.loop").forEach((v) => io.observe(v));
+}
+
 function render(keepScroll) {
   const [, tab = "work", slug] = (location.hash || "#/work").split("/");
   chrome();
   app.innerHTML = tab === "about" ? aboutView() : tab === "contact" ? contactView() : slug ? caseView(slug) : workView();
   document.querySelectorAll(".tabs a").forEach((a) => a.classList.toggle("active", a.dataset.tab === (["about", "contact"].includes(tab) ? tab : "work")));
   if (keepScroll !== true) window.scrollTo(0, 0);
+  watchLoops();
 }
 
 // Language toggle: re-render in place, keep the reader where they were
