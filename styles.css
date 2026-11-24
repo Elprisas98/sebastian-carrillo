@@ -283,3 +283,15 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); min-heig
   .video-row::-webkit-scrollbar { display: none; }
   .video-row figure { flex: 0 0 74%; scroll-snap-align: start; }
 }
+
+/* Campaign strip: Reel + statics at one shared height (flex-grow follows each aspect ratio) */
+.strip { display: flex; gap: 16px; align-items: flex-start; margin: 4px 0 40px; }
+.strip figure { flex: var(--ar) 1 0; min-width: 0; margin: 0; }
+.strip video, .strip img { display: block; width: 100%; aspect-ratio: var(--ar); object-fit: cover; border-radius: 12px; background: var(--petrol); }
+.strip img { cursor: zoom-in; }
+.strip figcaption { margin-top: 10px; font-size: 14px; font-weight: 500; line-height: 1.35; }
+@media (max-width: 900px) {
+  .strip { overflow-x: auto; scroll-snap-type: x mandatory; margin-right: calc(-1 * var(--gutter)); padding-right: var(--gutter); scrollbar-width: none; }
+  .strip::-webkit-scrollbar { display: none; }
+  .strip figure { flex: 0 0 calc(var(--ar) * 440px); scroll-snap-align: start; }
+}

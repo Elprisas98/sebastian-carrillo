@@ -155,7 +155,7 @@ const CASES = [
       "The close sells: \"Jubila a la poderosa\" (retire the old warhorse), no credit history, no guarantor, just your ID, a new laptop from S/49 a month, apply in 5 minutes. The line: \"Tu talento no necesita historial\". The same concept adapts to a meme-style carousel and a split static, ready to A/B test against catalog ads.",
       "Every story beat is AI footage: frames made with Nano Banana Pro from one base image to keep the person and the room consistent, animated with Kling 3.0 using start and end frames so the screen dies on camera. Sound design (voice-free) was generated with ElevenLabs and the close typography was set by hand in Asap, the brand's typeface. Not commissioned or published by BaldeCash.",
     ],
-    mp4: "spec-baldecash-ugc",
+    mp4: "spec-baldecash-ugc", strip: true,
     portrait: true,
     images: [
       ["spec-baldecash-car1", "Carousel 1/3: the meme"],
@@ -169,15 +169,21 @@ const CASES = [
     title: "Verano Heladizimo",
     client: "izipay", side: "Conceptual work · VML", year: "2024",
     metric: "Pitch", metricLabel: "concept recreated with AI",
-    thumb: "izipay-heladizimo-fans",
+    thumb: "izipay-heladizimo-fans", made: true,
     insight: "In a Lima heatwave, people walk into whichever business has air conditioning. The coolest shop on the block gets the customers.",
+    brief: [
+      ["Audience", "Small merchants in Lima (bodegas, menú restaurants, salons) losing customers to the February heat."],
+      ["Insight", "In a heatwave, customers choose the shop with air conditioning, not the one with the best prices."],
+      ["Mechanic", "Buy an izipay POS Android + Arisale and enter the raffle for an air conditioner for your shop."],
+      ["Measure", "POS Android sales during the campaign and cost per sale on paid social."],
+    ],
     body: [
       "In February, Lima went past 30°C and people started looking for air-conditioned places to escape the heat, usually small businesses that attracted customers without trying.",
       "The idea, pitched to the creative director: izipay raffles air conditioners among merchants who buy a POS Android with Arisale, so their shop becomes the neighborhood's refuge from the heat. Teasers posed the problem in izipay's \"Eso no tiene sentido\" voice, and the key visual explained the mechanic in three steps. TikTok scripts dramatized it, from a shop so cold the staff wear jackets to an owner who sleeps at the shop to escape the heat at home.",
-      "The UGC video tells the whole story in 18 seconds from a merchant's phone: a bodega owner complains that customers walk in, feel the heat and leave. Two weeks later she has won the air conditioner and nobody wants to leave.",
-      "Conceptual work. The pieces shown were recreated in 2026 from the original pitch and follow izipay's own social system: the logo tab, its red and teal, captions outlined in red and a heavy rounded sans close to the brand's Museo Sans. Photography and footage were generated with Nano Banana Pro and Veo 3.1, and typography and captions were set by hand.",
+      "The Reel opens on the teaser's question, \"¿Tienes más ventiladores que clientes?\": an empty bodega with five fans aimed at the owner. A customer walks in, feels the heat and walks straight back out toward the shop across the street that has air conditioning, under izipay's own line, \"Eso no tiene sentido.\" The mechanic arrives in one tap on the POS, and the payoff is the same bodega two weeks later: full, cold, the owner in a cardigan in February. Every beat is shown, none is said.",
+      "Conceptual work, recreated in 2026 from the original pitch, following izipay's own social system: the logo tab, its red and teal, words highlighted in red boxes and a heavy rounded sans close to the brand's Museo Sans. Every still came from one reference image in Nano Banana Pro so the bodega and its owner never change, animated with Kling 3.0, with sound design and cumbia generated with ElevenLabs and CassetteAI. Captions and end card were set by hand in Remotion.",
     ],
-    mp4: "izipay-heladizimo-ugc",
+    mp4: "izipay-heladizimo-ugc", strip: true, portrait: true,
     images: [
       ["izipay-heladizimo-fans", "Teaser: \"¿Tienes más ventiladores que clientes?\""],
       ["izipay-heladizimo-type", "Teaser: type-only post"],
@@ -363,11 +369,17 @@ const ES = {
   "izipay-heladizimo": {
     side: "Trabajo conceptual · VML", metric: "Pitch", metricLabel: "concepto recreado con IA",
     insight: "En una ola de calor en Lima, la gente entra al negocio que tenga aire acondicionado. El local más fresco de la cuadra se queda con los clientes.",
+    brief: [
+      ["Público", "Pequeños comercios de Lima (bodegas, menús, salones) que pierden clientes por el calor de febrero."],
+      ["Insight", "Con calor, el cliente elige el local con aire acondicionado, no el de mejores precios."],
+      ["Mecánica", "Compra un POS Android + Arisale de izipay y participa en el sorteo de un aire acondicionado para tu negocio."],
+      ["Qué medir", "Ventas de POS Android durante la campaña y costo por venta en pauta."],
+    ],
     body: [
       "En febrero, Lima pasó los 30 °C y la gente empezó a buscar lugares con aire acondicionado para escapar del calor, casi siempre pequeños negocios que atraían clientes sin proponérselo.",
       "La idea, presentada al director creativo: izipay sortea aires acondicionados entre los comercios que compran un POS Android con Arisale, para que su local sea el refugio del barrio contra el calor. Los teasers plantean el problema en la voz de \"Eso no tiene sentido\" de izipay, y el key visual explica la mecánica en tres pasos. Los guiones para TikTok lo dramatizan: desde un local tan frío que el personal usa casaca hasta un dueño que duerme en la tienda para escapar del calor de su casa.",
-      "El video UGC cuenta toda la historia en 18 segundos desde el celular de una comerciante: una bodeguera se queja de que los clientes entran, sienten el horno y se van. Dos semanas después ganó el aire acondicionado y nadie se quiere ir.",
-      "Trabajo conceptual. Las piezas se recrearon en 2026 a partir del pitch original y siguen el sistema de redes de izipay: la pestaña con el logo, su rojo y su turquesa, subtítulos con borde rojo y una sans redondeada y pesada cercana a la Museo Sans de la marca. La fotografía y el video se generaron con Nano Banana Pro y Veo 3.1, y la tipografía y los subtítulos se armaron a mano.",
+      "El Reel abre con la pregunta del teaser, \"¿Tienes más ventiladores que clientes?\": una bodega vacía con cinco ventiladores apuntando a la dueña. Entra un cliente, siente el horno y se va directo hacia la tienda de enfrente, la que tiene aire acondicionado, con la frase de la propia marca: \"Eso no tiene sentido.\" La mecánica llega con un toque en el POS, y el remate es la misma bodega dos semanas después: llena, fría y con la dueña en chompa en pleno febrero. Todo se muestra, nada se dice.",
+      "Trabajo conceptual, recreado en 2026 a partir del pitch original, con el sistema de redes de izipay: la pestaña con el logo, su rojo y su turquesa, palabras destacadas en cajas rojas y una sans redondeada y pesada cercana a la Museo Sans de la marca. Todos los cuadros salieron de una sola imagen de referencia en Nano Banana Pro para que la bodega y su dueña nunca cambien, se animaron con Kling 3.0, y el diseño sonoro y la cumbia se generaron con ElevenLabs y CassetteAI. Los textos y el cierre se armaron a mano en Remotion.",
     ],
     captions: ["Teaser: \"¿Tienes más ventiladores que clientes?\"", "Teaser: post tipográfico", "Key visual y mecánica"],
   },
@@ -506,7 +518,7 @@ function caseView(slug) {
   if (i < 0) return workView();
   const c = loc(CASES[i]);
   const next = loc(CASES[(i + 1) % CASES.length]);
-  const spec = c.slug.startsWith("spec-");
+  const spec = c.slug.startsWith("spec-") || c.made;
   const imgs = [
     ...(c.images || []).map((im) => (Array.isArray(im) ? { src: A(im[0]), caption: im[1] } : { src: A(im) })),
     ...(c.imageUrls || []).map((src) => ({ src })),
@@ -517,6 +529,11 @@ function caseView(slug) {
   const video = c.video ? `<div class="embed"><iframe src="${c.video}" title="${esc(c.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`
     : c.mp4s ? `<div class="video-row">${c.mp4s.map(([n, cap]) => `<figure><div class="embed-vertical"><video src="assets/${n}.mp4" poster="${A(n)}" controls playsinline preload="none"></video></div><figcaption>${esc(cap)}</figcaption></figure>`).join("")}</div>`
     : c.mp4 ? `<div class="embed-vertical"><video src="assets/${c.mp4}.mp4" poster="${A(c.mp4)}" controls playsinline preload="none"></video></div>` : "";
+  // A campaign strip: the Reel next to its static pieces, all at the same height
+  const strip = c.strip && c.mp4 ? `<div class="strip">${[
+    `<figure style="--ar:0.5625"><video src="assets/${c.mp4}.mp4" poster="${A(c.mp4)}" controls playsinline preload="none"></video><figcaption>Reel</figcaption></figure>`,
+    ...imgs.map(({ src, caption }) => `<figure style="--ar:0.8"><img src="${src}" alt="${esc(caption || c.title)}" loading="lazy">${caption ? `<figcaption>${esc(caption)}</figcaption>` : ""}</figure>`),
+  ].join("")}</div>` : "";
   const link = c.link ? `<a class="cta" href="${c.link.href}" target="_blank" rel="noopener">${esc(c.link.label)}</a>` : "";
   const brief = c.brief ? `
       <section class="brief" aria-label="${T("The brief", "El brief")}">
@@ -539,12 +556,12 @@ function caseView(slug) {
           <div class="big"><dt>${esc(c.metricLabel)}</dt><dd>${esc(c.metric)}</dd></div>
         </dl>
       </header>
-      ${video}${brief}
+      ${strip || video}${brief}
       <div class="case-body${spec ? " is-spec" : ""}">
         <div class="insight-card"><h3>${T("The idea", "La idea")}</h3><p class="insight">${esc(c.insight)}</p></div>
         <div><h3>${T("What was done", "Qué se hizo")}</h3>${body.map((p) => `<p>${esc(p)}</p>`).join("")}${made}</div>
       </div>
-      ${link}${gallery}
+      ${link}${strip ? "" : gallery}
       <a class="next-case" href="#/work/${next.slug}"><span>${T("Next case", "Siguiente caso")}</span><b>${esc(next.title)} →</b></a>
     </article>`;
 }
@@ -693,7 +710,7 @@ document.addEventListener("click", (e) => {
 // Lightbox for gallery images
 const lb = document.getElementById("lightbox");
 app.addEventListener("click", (e) => {
-  const img = e.target.closest(".gallery img");
+  const img = e.target.closest(".gallery img, .strip img");
   if (!img) return;
   lb.querySelector("img").src = img.src;
   lb.hidden = false;
