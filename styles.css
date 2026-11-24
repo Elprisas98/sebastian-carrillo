@@ -295,3 +295,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); min-heig
   .strip::-webkit-scrollbar { display: none; }
   .strip figure { flex: 0 0 calc(var(--ar) * 440px); scroll-snap-align: start; }
 }
+
+/* Fullscreen shows the whole vertical ad, letterboxed, instead of cropping it to the screen */
+video:fullscreen { object-fit: contain !important; background: #000; transform: none !important; border-radius: 0 !important; }
+video:-webkit-full-screen { object-fit: contain !important; background: #000; transform: none !important; border-radius: 0 !important; }
